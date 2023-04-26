@@ -1,0 +1,78 @@
+
+
+.dn {
+  display: none;
+}
+
+.flexy {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.balloons {
+  opacity: 0;
+}
+
+.confettis {
+  transform-origin: 50% 50%;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  70% {
+    transform: translate3d(0, -5%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes explode {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  25% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.explode {
+  animation-name: explode;
+}
+
+.animated {
+  animation-duration: 1.3s;
+  animation-fill-mode: both;
+}
+
+.delay {
+  animation-delay: 0.2s;
+}
+
+.delay--b {
+  animation-delay: 0.5s;
+}
+
+.delay--c {
+  animation-delay: 0.6s;
+}
+
+.speed {
+  animation-duration: 1.3s;
+}
+
+.speed--a {
+  animation-duration: 1s;
+}

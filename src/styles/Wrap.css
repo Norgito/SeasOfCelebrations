@@ -1,0 +1,36 @@
+.containerr {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+  }
+  
+  .gallery-items {
+    display: flex;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .gallery-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #ccc;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .gallery-control--prev {
+    left: 0;
+  }
+  
+  .gallery-control--next {
+    right: 0;
+  }

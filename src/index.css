@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Poppins, Lobster, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+  .Center {
+    @apply flex justify-center items-center
+  }
+  .dropdown {
+    @apply w-full lg:max-w-[296px]  cursor-pointer;
+  }
+  .dropdown-btn {
+    @apply flex h-[64px] items-center  px-[18px] border rounded;
+  }
+  .dropdown-icon-secondary {
+    @apply text-2xl text-primary ml-auto;
+  }
+  .dropdown-menu {
+    @apply px-6 py-8 text-[15px] space-y-2 shadow-md bg-gray-50 absolute w-full list-none rounded-b;
+  }
+}
+
+.MainBg {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(154, 224, 255, 1) 50%,
+    rgba(0, 150, 216, 1) 100%
+  );
+}
+
+.container2 {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MainNav {
+  background: #e55d87; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #5fc3e4,
+    #e55d87
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #5fc3e4,
+    #e55d87
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.NavLink a {
+  text-decoration: none;
+  position: relative;
+}
+
+.NavLink a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e69b00;
+  transition: width 0.3s;
+}
+
+.NavLink a:hover::after {
+  width: 50%;
+}
+
+.gallery-items {
+  display: flex;
+  overflow-x: hidden;
+}
+
+.gallery-item {
+  flex: 0 0 25%;
+}
