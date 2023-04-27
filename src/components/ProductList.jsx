@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { HouseContext } from "./HouseContext";
 import Product from "./Product";
 import "../index.css";
@@ -28,11 +28,7 @@ const ProductList = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {searchResults.map((prod, index) => {
-            return (
-       
-                <Product key={index} prod={prod} />
-
-            );
+            return <Product key={index} prod={prod} />;
           })}
         </div>
       </div>

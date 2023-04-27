@@ -19,7 +19,7 @@ import "./index.css";
 function App () {
   return (
     <div className="App">
-      <div className="max-w[1440px] mx-auto MainBg">
+      <div className="max-w[1440px] mx-auto bg-white">
         <Header />
         <Routes>
           <Route key="Home" path="/" element={<Home />} />

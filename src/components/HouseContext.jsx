@@ -1,4 +1,4 @@
-import  { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
 
@@ -11,13 +11,13 @@ const HouseContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [rents, setRents] = useState([]);
   const [originalItems, setOriginalItems] = useState([]);
-  // const [country, setCountry] = useState("Location (any)");
-  // const [countries, setCountries] = useState(["Location "]);
+  const [country, setCountry] = useState("Location (any)");
+  const [countries, setCountries] = useState(["Location "]);
   const [property, setProperty] = useState("Property type (any)");
   const [properties, setProperties] = useState([]);
-  // const [price, setPrice] = useState("Price range (any)");
-  // const [images, setImages] = useState([]);
-  // const [loading, setLoading] = useState(false);
+  const [price, setPrice] = useState("Price range (any)");
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   // Items
   useEffect(() => {
@@ -91,20 +91,20 @@ const HouseContextProvider = ({ children }) => {
   // }, []);
 
   // // Properties
-   useEffect(() => {
-     const getPropertiesList = async () => {
-       try {
-         const data = await getDocs(collection(db, "products"));
-         const properties = data.docs.map((doc) => doc.data().category);
-         const uniqueProperties = [...new Set(properties)];
-         setProperties(uniqueProperties);
-       } catch (err) {
-         console.error(err);
-       }
-     };
+  useEffect(() => {
+    const getPropertiesList = async () => {
+      try {
+        const data = await getDocs(collection(db, "products"));
+        const properties = data.docs.map((doc) => doc.data().category);
+        const uniqueProperties = [...new Set(properties)];
+        setProperties(uniqueProperties);
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
-     getPropertiesList();
-   }, []);
+    getPropertiesList();
+  }, []);
 
   // // Images
   // useEffect(() => {
@@ -198,23 +198,23 @@ const HouseContextProvider = ({ children }) => {
   return (
     <HouseContext.Provider
       value={{
-        // country,
-        // setCountry,
-        // countries,
+        country,
+        setCountry,
+        countries,
         property,
         setProperty,
         properties,
-        // price,
+        price,
         items,
         setItems,
-        // setPrice,
+        setPrice,
         handleClick,
-        // loading,
-        // setLoading,
+        loading,
+        setLoading,
         originalItems,
         setOriginalItems,
-        // images,
-        // setImages,
+        images,
+        setImages,
         products,
         setProducts,
         rents,

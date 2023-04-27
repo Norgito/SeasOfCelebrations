@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import  { useContext, useState, useEffect } from "react";
 import { HouseContext } from "./HouseContext";
 import Rent from "./Rent";
 
@@ -6,6 +6,7 @@ const RentList = () => {
   const { rents, loading } = useContext(HouseContext);
   const [searchResults, setSearchResults] = useState([]);
 
+  
   useEffect(() => {
     setSearchResults(rents);
   }, [rents]);
@@ -22,13 +23,14 @@ const RentList = () => {
     );
   }
 
+
   return (
     <section className="mb-5 ">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {searchResults.map((rent, indexRent) => {
+          {searchResults.map((rent, index) => {
             return (
-              <Rent key={indexRent} rent={rent} />
+                <Rent key={index} rent={rent} />
             );
           })}
         </div>

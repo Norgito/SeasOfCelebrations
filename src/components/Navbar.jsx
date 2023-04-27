@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/Logo/SeasLogo.png";
 import Waves from "./Waves";
@@ -29,7 +28,7 @@ const NavLinks = () => {
       </div>
 
       <div className="container2 absolute text-white font-light z-30">
-        <ul className="flex justify-center MainNav px-8 py-2 rounded-full mt-10 gap-14">
+        <ul className="flex justify-center AnimatedBg px-8 py-2 rounded-full mt-10 gap-14">
           <li
             style={{ cursor: "pointer" }}
             className="duration-100 transition-all ease-in-out"

@@ -1,5 +1,5 @@
-import React, { createContext, useState } from "react";
-
+import { createContext, useState } from "react";
+import PropTypes from "prop-types";
 export const CartContext = createContext()
 
 const CartContextProvider = ({ children }) => {
@@ -49,5 +49,9 @@ const CartContextProvider = ({ children }) => {
     </CartContext.Provider>
   )
 }
+
+CartContextProvider.propTypes = {
+  children: PropTypes.object.isRequired,
+};
 
 export default CartContextProvider

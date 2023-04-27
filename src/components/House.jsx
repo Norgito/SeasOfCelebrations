@@ -1,7 +1,9 @@
 import { useEffect, useState, useContext } from "react";
+import PropTypes from "prop-types";
 import { CartContext } from "../context/CartContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Balloon from "../assets/P.png";
 import ItemCountServicesRent from "./ItemCountServicesRent";
 
 const House = ({ house }) => {
@@ -18,32 +20,45 @@ const House = ({ house }) => {
   };
 
   return (
-    <div
-      className=" bg-blue-300 rounded  shadow-md mt-22 mx-auto w-full max-w-[370px] md:h-[580px] lg:h-[360px] h-[590px]  hover:shadow-lg mb-2 icon"
-      // data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="1000"
-    >
-      {/* Image */}
-      <div className=" flex justify-center items-center">
-        <img
-          className=" rounded md:h-[270px] lg:h-[250px] "
-          src={house.image}
-          alt=""
-        />
-      </div>
-      <div className="flex bg-purple-300  flex-col items-center justify-center">
-        <p className="px-4 text-lg text-white ">{house.name.toUpperCase()}</p>
-      </div>
-      <div className="flex bg-purple-600  flex-col items-center justify-center">
-        <p className="px-4 text-lg text-white ">$ {house.price}</p>
-      </div>
+    <div className="Center px-2 ">
+      <ul className="cards px-2 ">
+        <li>
+          <a className="cardItems shadow-md">
+            <p className="price ColorSer">${house.price}</p>
+            <img src={house.image} className="card__image" />
+            <div className="card__overlay">
+              <div className="card__header ColorSer">
+                <svg className="card__arc1" xmlns="http://www.w3.org/2000/svg">
+                  <path />
+                </svg>
+                <div className="bg-white rounded-full w-[50px] h-[50px]">
+                  <img className="card__thumb" src={Balloon} />
+                </div>
+                <div className="card__header-text">
+                  <h3 className="card__title bg-white/20 px-2 rounded-full">
+                    {house.name}
+                  </h3>
+                  <ItemCountServicesRent initial={itemCount} onAdd={onAdd} />
+                </div>
+              </div>
 
-      <div className="flex justify-center items-center mt-4">
-        <ItemCountServicesRent initial={itemCount} onAdd={onAdd} />
-      </div>
+              <p className="card__description">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
   );
+};
+
+House.propTypes = {
+  house: PropTypes.shape({
+    image: PropTypes.array.isRequired,
+    price: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default House;

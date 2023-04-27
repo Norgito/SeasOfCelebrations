@@ -1,10 +1,9 @@
-import React from 'react'
-import ItemCount from '../components/ItemCount'
+
 
 const Gallery = () => {
   return (
     <div>
-      <ItemCount />
+      Gallery
     </div>
   )
 }

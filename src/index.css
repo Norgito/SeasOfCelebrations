@@ -17,7 +17,7 @@
     @apply text-xl font-bold;
   }
   .Center {
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center;
   }
   .dropdown {
     @apply w-full lg:max-w-[296px]  cursor-pointer;
@@ -31,6 +31,9 @@
   .dropdown-menu {
     @apply px-6 py-8 text-[15px] space-y-2 shadow-md bg-gray-50 absolute w-full list-none rounded-b;
   }
+  .price {
+    @apply absolute right-0 mt-6 rounded-l-full w-[70px] h-[30px] text-center p-1  text-sm text-white shadow-md;
+  }
 }
 
 .MainBg {
@@ -43,24 +46,46 @@
   );
 }
 
+.TextColors {
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, purple, magenta);
+}
+
+.ColorSer {
+  background-image: linear-gradient(-225deg, #f839e3 0%, #a647ed 48%, #7257f4 100%);
+}
+.ColorRent {
+  background-image: linear-gradient(-225deg, #fee56d 0%, #fa8d9a 48%, #f541c5 100%);
+}
+.ColorProd {
+  background-image: linear-gradient(-225deg, #37f782 0%,   #5daeb4 48%, #8b65ed 100%);
+}
+
+.ColorBg {
+  background-image: linear-gradient(-225deg, #f839e3 0%, #a647ed 48%, #7257f4 100%);
+}
+
+.AnimatedBg {
+  background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .container2 {
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.MainNav {
-  background: #e55d87; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #5fc3e4,
-    #e55d87
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #5fc3e4,
-    #e55d87
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .NavLink a {

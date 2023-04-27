@@ -1,7 +1,6 @@
-import React, { useContext, useState, useEffect } from "react";
-import { HouseContext } from "../components/HouseContext";
-import House from "../components/House";
-
+import { useContext, useState, useEffect } from "react";
+import { HouseContext } from "./HouseContext";
+import House from "./House";
 
 const PageServicesList = () => {
   const { items, loading } = useContext(HouseContext);
@@ -27,8 +26,8 @@ const PageServicesList = () => {
     <section className="mb-20 ">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {searchResults.map((item, index) => {
-            return <House house={item} />;
+          {searchResults.map((item, HousePage) => {
+            return <House key={HousePage} house={item} />;
           })}
         </div>
       </div>

@@ -1,51 +1,68 @@
 import { useEffect, useState, useContext } from "react";
+import PropTypes from "prop-types";
 import { CartContext } from "../context/CartContext";
-import ItemCount from "./ItemCount";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ItemCountServicesRent from "./ItemCountServicesRent";
+import Balloon from "../assets/P.png";
+import "../styles/productCard.css";
+
 
 const Rent = ({ rent }) => {
   const [itemCount, setItemCount] = useState(0);
   const test = useContext(CartContext);
 
+
+
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
-
   const onAdd = (quantity) => {
     setItemCount(quantity);
     test.addItem(rent, quantity);
   };
 
   return (
-    <div
-      className="bg-blue-300 rounded  shadow-md mt-22 mx-auto w-full max-w-[370px] md:h-[580px] lg:h-[360px] h-[590px]  hover:shadow-lg mb-2 icon"
-      // data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="1000"
-    >
-      {/* Image */}
-      <div className=" flex justify-center items-center">
-        <img
-          className=" rounded md:h-[270px] lg:h-[250px] "
-          src={rent.image}
-          alt=""
-        />
-      </div>
-      <div className="flex bg-purple-300  flex-col items-center justify-center">
-        <p className="px-4 text-lg text-white ">{rent.name.toUpperCase()}</p>
-      </div>
-      <div className="flex bg-purple-600  flex-col items-center justify-center">
-        <p className="px-4 text-lg text-white ">$ {rent.price}</p>
-      </div>
+    <div className="Center px-2">
+        <ul className="cards px-2 ">
+          <li>
+            <a className="cardItems shadow-md">
+              <p className="price ColorRent">${rent.price}</p>
+              <img src={rent.image} className="card__image" />
+              <div className="card__overlay">
+                <div className="card__header ColorRent">
+                  <svg
+                    className="card__arc2"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path />
+                  </svg>
+                  <div className="bg-white rounded-full w-[50px] h-[50px]">
+                    <img className="card__thumb" src={Balloon} />
+                  </div>
+                  <div className="card__header-text">
+                    <h3 className="card__title bg-white/20 px-2 rounded-full">
+                      {rent.name.toUpperCase()}
+                    </h3>
 
-      <div className="flex justify-center mt-3">
-        <ItemCountServicesRent initial={itemCount} onAdd={onAdd} />
+                    <ItemCountServicesRent initial={itemCount} onAdd={onAdd} />
+                  </div>
+                </div>
+
+                <p className="card__description">
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
   );
+};
+
+Rent.propTypes = {
+  rent: PropTypes.object.isRequired,
 };
 
 export default Rent;

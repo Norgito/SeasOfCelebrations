@@ -20,7 +20,6 @@ import FormatNumber from "../utils/FormatNumber";
 
 const Cart = () => {
   const test = useContext(CartContext);
-  console.log(test.cartList);
 
   const [buyer, setBuyer] = useState({
     name: "",
@@ -60,7 +59,7 @@ const Cart = () => {
     };
 
     createOrderFirestore()
-      .then((result) => notify(result.id))
+      //.then((result) => notify(result.id))
       .catch((e) => console.log(e));
 
     test.cartList.forEach(async (prod) => {
@@ -80,8 +79,8 @@ const Cart = () => {
       </div>
       <hr />
       {test.cartList.length > 0 &&
-        test.cartList.map((prod) => (
-          <div className="flex justify-center items-center gap-6 p-2 ">
+        test.cartList.map((prod, i) => (
+          <div key={i} className="flex justify-center items-center gap-6 p-2">
             <img
               src={prod.image}
               alt="pic"
