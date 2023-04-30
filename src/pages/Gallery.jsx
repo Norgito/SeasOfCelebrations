@@ -1,9 +1,10 @@
+import BannerGallery from "../components/BannerGallery"
 
 
 const Gallery = () => {
   return (
     <div>
-      Gallery
+      <BannerGallery />
     </div>
   )
 }

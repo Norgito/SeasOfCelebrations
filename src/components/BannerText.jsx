@@ -1,9 +1,9 @@
-import React from "react";
+import "../index.css"
 
 const BannerText = () => {
   return (
-    <div className="text-[80px] font-secondary text-center flex flex-col text-white  p-6">
-      <span className="">Welcome to Seas of Celebrations</span>
+    <div className="text-[70px] z-10 font-secondary text-center flex flex-col text-white m-[160px] ">
+      <span className="text-purple-400">Welcome to Seas of Celebrations</span>
     </div>
   );
 };

@@ -1,11 +1,10 @@
-import React from "react";
 import "../styles/boxInfo.css";
 import TreeBalloons from "./TreeBalloons";
 
 const BoxInfo = () => {
   return (
     <div className="">
-      <div className="flex justify-center gap-x-11 items-center  font-extralight">
+      <div className="flex justify-center gap-x-8 items-center  font-extralight">
         <div className="card ">
           <div className="icon">
             <div className="relative left-1/2 mt-0 z-20 ">
@@ -22,7 +21,7 @@ const BoxInfo = () => {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div className="card scale-110">
           <div className="icon">
             <div className="relative left-1/2 mt-0 z-20 ">
               <TreeBalloons />

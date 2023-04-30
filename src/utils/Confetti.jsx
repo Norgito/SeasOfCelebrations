@@ -3,7 +3,7 @@ import "../styles/confetti.css";
 
 export const Confetti = () => {
   const confettiShower = [];
-  const numConfettis = 0;
+  const numConfettis = 40;
   const colors = ["#f2abe7", "#9fa3ec", "#86d2e1 ", "#fec31e "];
   const confettiContainer = React.useRef(null);
 
@@ -61,5 +61,10 @@ export const Confetti = () => {
     animateConfetti();
   }, []);
 
-  return <div ref={confettiContainer} style={{display: "flex", flexDirection: "column"}}></div>;
+  return (
+    <div
+      ref={confettiContainer}
+      style={{ display: "flex", flexDirection: "column" }}
+    ></div>
+  );
 };

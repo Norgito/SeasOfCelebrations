@@ -1,0 +1,16 @@
+.Banner {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  
+  background: linear-gradient(to bottom, #849bda, #c471ed, #000000),
+    url(https://i.imgur.com/pMqx1RX.jpg);
+  background-size: cover;
+  background-blend-mode:screen;
+}
+
+Wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

@@ -22,9 +22,9 @@ export default {
     },
     extend: {
       colors: {
-        primary: 'rgb(215,238,248)',
-        secondary: '#c84ff4',
-        extra: '#d245f3'
+        primary: '#31aee5',
+        secondary: '#ffffff',
+        extra: '#c84ff4'
       },
       boxShadow: {
         1: '0px 4px 30px rgba(0, 0, 0, 0.08)'

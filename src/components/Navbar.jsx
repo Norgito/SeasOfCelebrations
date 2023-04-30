@@ -1,16 +1,18 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/img/Logo/SeasLogo.png";
-import Waves from "./Waves";
+//import Waves from "./Waves";
 import FacebookIcon from "../utils/Icons/FacebookIcon";
 import InstagramIcon from "../utils/Icons/InstagramIcon";
 import TiktokIcon from "../utils/Icons/TiktokIcon.jsx";
 import WhatsappIcon from "../utils/Icons/WhatsappIcon";
 import "../index.css";
 import CartWidget from "./CartWidget";
+import { Confetti } from "../utils/Confetti";
 
 const NavLinks = () => {
   return (
     <>
+      <Confetti />
       <div className="flex justify-center items-center gap-6 bg-white">
         <div className="flex gap-6">
           <InstagramIcon />
@@ -70,8 +72,6 @@ const NavLinks = () => {
           </Link>
         </ul>
       </div>
-
-      <Waves />
     </>
   );
 };

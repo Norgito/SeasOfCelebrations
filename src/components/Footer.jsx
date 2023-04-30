@@ -1,10 +1,10 @@
-import React from "react";
+//  import Waves from "./Waves";
 
 
 const Footer = () => {
   return (
-    <div className="mt-[200px] flex justify-center items-center bg-slate-600">
-      <p>Copyrights 2023</p>
+    <div className="mt-[100px]">
+      {/* <Waves /> */}
     </div>
   );
 };

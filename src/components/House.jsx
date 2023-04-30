@@ -41,10 +41,6 @@ const House = ({ house }) => {
                   <ItemCountServicesRent initial={itemCount} onAdd={onAdd} />
                 </div>
               </div>
-
-              <p className="card__description">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
             </div>
           </a>
         </li>
