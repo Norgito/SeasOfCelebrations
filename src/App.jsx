@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
@@ -10,13 +9,13 @@ import {
   NotFound,
   Rent,
   Services,
-  Cart
+  Cart,
 } from "./utils/PageIndex";
 import Header from "./components/Header";
 import Footer from "../src/components/Footer";
 import "./index.css";
 
-function App () {
+function App() {
   return (
     <div className="App">
       <div className="max-w[1440px] mx-auto ">

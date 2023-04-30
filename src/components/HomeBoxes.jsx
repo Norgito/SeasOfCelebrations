@@ -37,7 +37,8 @@ const HomeBoxes = () => {
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
-        className="bg-green-400 w-[300px] h-[400px] rounded-lg flex flex-col justify-center items-center gap-4 pt-10 shadow-md">
+        className="bg-green-400 w-[300px] h-[400px] rounded-lg flex flex-col justify-center items-center gap-4 pt-10 shadow-md"
+      >
         <p className="font-light text-4xl bg-green-100/50 w-full ">RENTA</p>
         <p className="text-center container font-light text-sm mb-2 text-purple-900">
           Ofrecemos un servicio de renta para eventos que incluye mesas, sillas,
@@ -54,7 +55,8 @@ const HomeBoxes = () => {
         data-aos="flip-left"
         data-aos-easing="ease-out-cubic"
         data-aos-duration="1000"
-        className="bg-yellow-500 w-[300px] h-[400px] rounded-lg flex flex-col justify-center items-center gap-4 pt-10 shadow-md">
+        className="bg-yellow-500 w-[300px] h-[400px] rounded-lg flex flex-col justify-center items-center gap-4 pt-10 shadow-md"
+      >
         <p className="font-light text-4xl bg-yellow-100/50 w-full">EVENTOS</p>
         <p className="text-center container font-light text-sm mb-2 text-blue-950">
           Seas of Celebrations es un servicio de decoración de eventos que

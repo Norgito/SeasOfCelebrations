@@ -113,7 +113,7 @@
 .AnimatedBg2 {
   background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+  animation: gradient 45s ease infinite;
 }
 
 @keyframes gradient {
@@ -293,4 +293,20 @@
   overflow: hidden;
   width: 1040px;
   perspective: 1190px !important;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.react-floater-animated {
+  animation: floating 3s ease infinite;
+  will-change: transform;
 }

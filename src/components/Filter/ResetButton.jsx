@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { HouseContext } from "../../components/HouseContext";
 import { BiReset } from "react-icons/bi";
 

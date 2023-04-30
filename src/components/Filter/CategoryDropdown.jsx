@@ -1,5 +1,5 @@
-import React, { useState, useContext } from "react";
-import Cas  from "../../assets/cas.svg";
+import { useState, useContext } from "react";
+import Cas from "../../assets/cas.svg";
 import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import { Menu } from "@headlessui/react";
 import { HouseContext } from "../HouseContext";
@@ -16,7 +16,7 @@ const CategoryDropdown = () => {
         className="dropdown-btn w-full text-left "
       >
         {/* ICON */}
-        <img src={ Cas } alt="house" className="w-[30px]" />
+        <img src={Cas} alt="house" className="w-[30px]" />
 
         <div>
           <div className="pl-4 text-[14px] font-normal leading-tight">

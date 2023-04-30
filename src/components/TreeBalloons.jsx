@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/TreeBalloons.css"
 
 const TreeBalloons = () => {

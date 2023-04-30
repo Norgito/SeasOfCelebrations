@@ -7,7 +7,7 @@ const BoxInfo = () => {
       <div className="flex justify-center gap-x-8 items-center  font-extralight">
         <div className="card ">
           <div className="icon">
-            <div className="relative left-1/2 mt-0 z-20 ">
+            <div className="relative left-1/2 mt-0 z-20">
               <TreeBalloons />
             </div>
           </div>

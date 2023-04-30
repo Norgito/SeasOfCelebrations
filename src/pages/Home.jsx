@@ -7,7 +7,7 @@ import "../index.css";
 import Balloon from "../assets/balloon.png";
 import Balloon2 from "../assets/balloon2.png";
 import Balloon3 from "../assets/balloon3.png";
-import BannerText from "../components/BannerText";
+// import BannerText from "../components/BannerText";
 // import BannerGallery from "../components/BannerGallery";
 // import Waves from "../components/Waves";
 
@@ -21,7 +21,7 @@ const Home = () => {
         <BoxInfo />
       </div>
       <div className="mt-6 ">
-        <div className="text-[40px] font-secondary text-center Center flex-col ">
+        <div className="text-[40px] font-secondary text-center Center flex-col react-floater-animated ">
           <img src={Balloon} className="w-[120px] mr-[445px] absolute" />
           <img src={Balloon} className="w-[120px] ml-[445px] absolute" />
           <div className="z-20 Center ">
@@ -31,7 +31,7 @@ const Home = () => {
           </div>
         </div>
         <HouseList />
-        <div className="text-[50px] font-secondary text-center Center flex-col px-6">
+        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated ">
           <img src={Balloon2} className="w-[120px] mr-[445px] absolute" />
           <img src={Balloon2} className="w-[120px] ml-[445px] absolute" />
           <div className="z-20 Center">
@@ -41,7 +41,7 @@ const Home = () => {
           </div>
         </div>
         <RentList />
-        <div className="text-[50px] font-secondary text-center Center flex-col px-6">
+        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated ">
           <img src={Balloon3} className="w-[120px] mr-[445px] absolute" />
           <img src={Balloon3} className="w-[120px] ml-[445px] absolute" />
           <div className="z-20 Center">

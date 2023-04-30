@@ -24,17 +24,11 @@ const ItemCount = ({ stock = 0, onAdd }) => {
   return (
     <>
       <div className="flex border rounded-full justify-center items-center gap-4 mt-2 text-white">
-        <button
-          onClick={handleSubtract}
-          className="text-xs rounded-full"
-        >
+        <button onClick={handleSubtract} className="text-xs rounded-full">
           -
         </button>
         <p className="font-primary text-sm">{count}</p>
-        <button
-          onClick={handleAdd}
-          className="text-xs rounded-full"
-        >
+        <button onClick={handleAdd} className="text-xs rounded-full">
           +
         </button>
       </div>
@@ -57,6 +51,5 @@ ItemCount.propTypes = {
   stock: PropTypes.number.isRequired,
   onAdd: PropTypes.func.isRequired,
 };
-
 
 export default ItemCount;

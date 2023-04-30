@@ -1,4 +1,3 @@
-import React from "react";
 import { Balloons } from "../utils/Balloons";
 import "../styles/seaBalloons.css"
 
