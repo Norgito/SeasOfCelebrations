@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import CartButton from "./CartButton";
 const ItemCount = ({ stock = 0, onAdd }) => {
   const [count, setCount] = useState(1);
 
@@ -32,16 +33,9 @@ const ItemCount = ({ stock = 0, onAdd }) => {
           +
         </button>
       </div>
-      <div className="flex justify-center items-end">
-        <button
-          onClick={handleAddToCart}
-          style={{ cursor: "pointer" }}
-          className="flex justify-center items-center"
-        >
-          <p className="bg-white/20 rounded-full p-1 mt-2 text-xs text-white">
-            Add to Cart
-          </p>
-        </button>
+
+      <div className=" pt-2 flex justify-center items-end" onClick={handleAddToCart}>
+        <CartButton />
       </div>
     </>
   );

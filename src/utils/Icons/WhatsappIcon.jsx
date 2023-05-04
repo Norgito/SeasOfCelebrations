@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 
@@ -13,7 +13,7 @@ const WhatsappIcon = () => {
       autoplay: true,
       path: "https://raw.githubusercontent.com/Norgito/vite-realstate-d/master/src/assets/img/SocialIcons/whatsapp2.json",
     });
-    animation.setSpeed(0.2);
+    animation.setSpeed(0.1);
     return () => {
       animation.stop();
       animation.destroy();

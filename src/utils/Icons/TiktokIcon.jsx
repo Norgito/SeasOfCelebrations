@@ -13,7 +13,7 @@ const TiktokIcon = () => {
       autoplay: true,
       path: "https://raw.githubusercontent.com/Norgito/vite-realstate-d/master/src/assets/img/SocialIcons/tiktok2.json",
     });
-    animation.setSpeed(0.2);
+    animation.setSpeed(0.1);
     return () => {
       animation.stop();
       animation.destroy();

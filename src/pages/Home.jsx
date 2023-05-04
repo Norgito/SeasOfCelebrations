@@ -1,5 +1,5 @@
 import { Confetti } from "../utils/Confetti";
-import HouseList from "../components/HouseList";
+import HouseList from "../components/ServiceList";
 import BoxInfo from "../components/BoxInfo";
 import ProductList from "../components/ProductList";
 import RentList from "../components/RentList";
@@ -7,17 +7,18 @@ import "../index.css";
 import Balloon from "../assets/balloon.png";
 import Balloon2 from "../assets/balloon2.png";
 import Balloon3 from "../assets/balloon3.png";
-// import BannerText from "../components/BannerText";
-// import BannerGallery from "../components/BannerGallery";
-// import Waves from "../components/Waves";
+import InstagramIcon from "../utils/Icons/InstagramIcon";
+import WhatsappIcon from "../utils/Icons/WhatsappIcon";
 
 const Home = () => {
   return (
     <>
       <Confetti />
+      <div className="text fixed m-4 bottom-0 z-30">
+        <WhatsappIcon />
+        <InstagramIcon />
+      </div>
       <div className="mt-10">
-        {/* <BannerGallery /> */}
-        {/* <BannerText /> */}
         <BoxInfo />
       </div>
       <div className="mt-6 ">

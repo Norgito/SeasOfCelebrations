@@ -9,6 +9,7 @@ export default {
       secondary: 'Lobster'
     },
     container: {
+      center: true,
       padding: {
         DEFAULT: '1rem',
         lg: '2rem'

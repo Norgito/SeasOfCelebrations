@@ -4,19 +4,18 @@ import { CartContext } from "../context/CartContext";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ItemCount from "./ItemCount";
-import "../styles/productCard.css";
 
-const Rent = ({ rent }) => {
+const Service = ({ service }) => {
   const [itemCount, setItemCount] = useState(0);
   const test = useContext(CartContext);
-
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+
   const onAdd = (quantity) => {
     setItemCount(quantity);
-    test.addItem(rent, quantity);
+    test.addItem(service, quantity);
   };
 
   return (
@@ -24,21 +23,21 @@ const Rent = ({ rent }) => {
       <ul className="cards px-2 ">
         <li>
           <a className="cardItems shadow-md">
-            <img src={rent.image} className="card__image" />
+            <img src={service.image} className="card__image" />
             <div className="card__overlay">
-              <div className="card__header ColorRent">
+              <div className="card__header ColorSer">
                 <svg className="card__arc3" xmlns="http://www.w3.org/2000/svg">
                   <path />
                 </svg>
                 <div className=" text-white shadow-1 border-2  shadow-white Center rounded-full w-[55px] h-[55px]">
-                  <p>${rent.price}</p>
+                  <p>${service.price}</p>
                 </div>
                 <div className="text-center">
                   <h3 className="card__title font-light px-2 rounded-full">
-                    {rent.name}
+                    {service.name}
                   </h3>
                   <ItemCount
-                    stock={rent.stock}
+                    stock={service.stock}
                     initial={itemCount}
                     onAdd={onAdd}
                   />
@@ -55,8 +54,8 @@ const Rent = ({ rent }) => {
   );
 };
 
-Rent.propTypes = {
-  rent: PropTypes.shape({
+Service.propTypes = {
+  service: PropTypes.shape({
     image: PropTypes.array.isRequired,
     price: PropTypes.number.isRequired,
     stock: PropTypes.number.isRequired,
@@ -64,4 +63,4 @@ Rent.propTypes = {
   }).isRequired,
 };
 
-export default Rent;
+export default Service;

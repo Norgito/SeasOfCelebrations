@@ -52,8 +52,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2em;
-  padding: 2em;
+  padding: 1em;
   border-radius: calc(var(--curve) * 1px) 0 0 0;
   transform: translateY(-100%);
   transition: 0.2s ease-in-out;

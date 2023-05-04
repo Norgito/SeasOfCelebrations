@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
-import { HouseContext } from "../components/HouseContext";
-import House from "../components/House";
+import { HouseContext } from "./HouseContext";
+import Service from "./Service";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -53,9 +53,7 @@ const HouseList = () => {
         >
           {searchResults.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="">
-                <House house={item} />
-              </div>
+              <Service service={item} />
             </SwiperSlide>
           ))}
           <div className="slider-controler ">

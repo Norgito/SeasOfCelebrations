@@ -11,7 +11,7 @@ const CartWidget = () => {
   const test = useContext(CartContext);
 
   return (
-    <div className="top-1 right-2 fixed z-20 react-floater-animated">
+    <div className="top-1 right-2 fixed z-50 react-floater-animated">
         <Link to="/Cart">
           <div className="absolute z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ">
             <Badge
@@ -22,7 +22,7 @@ const CartWidget = () => {
           </div>
           <div className="Center z-10 ">
             {/* <ReactFloaterJs> */}
-            <img src={CartImage} className="w-[200px] z-10" />
+            <img src={CartImage} className="w-[200px]" />
             {/* </ReactFloaterJs> */}
           </div>
         </Link>
