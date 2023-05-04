@@ -1,9 +1,10 @@
 .headerWave {
   position: relative;
   text-align: center;
-  background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
+  background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab), url(https://i.imgur.com/oRbPAGz.png);
   animation: gradient 35s ease infinite;
+  background-size: cover;
+  background-blend-mode: screen;
 }
 
 .Text3d {
@@ -23,7 +24,7 @@
 
 
 .inner-header {
-  height: 45vh;
+  height: 50vh;
   width: 100%;
   margin: 0;
   padding: 0;

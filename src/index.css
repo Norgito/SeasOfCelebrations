@@ -114,6 +114,7 @@
   background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 45s ease infinite;
+
 }
 
 @keyframes gradient {
@@ -135,7 +136,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .container2 {

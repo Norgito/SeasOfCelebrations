@@ -1,14 +1,18 @@
 import "../styles/WaveTop.css";
 import "animate.css";
+import FacebookIcon from "../utils/Icons/FacebookIcon";
 
 const WaveTop = () => {
   return (
     <div>
       <div className="headerWave">
-        <div className="inner-header flexWave">
-          <p className="text-[75px] mt-[260px] font-secondary text-white filter drop-shadow-md shadow-black Text3d animate__animated animate__zoomIn  animate__slower">
-            Party Supplies & Rentals
-          </p>
+        <div className="inner-header flexWave ">
+          <div className="bg-white/80 mt-[250px] px-6 rounded-full shadow-1 shadow-white">
+            <p className="AnimatedBg text-[75px]  font-secondary filter drop-shadow-md ">
+              Party Supplies & Rentals
+            </p>
+          </div>
+            <FacebookIcon />
         </div>
         <div>
           <svg

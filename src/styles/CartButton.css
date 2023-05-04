@@ -1,191 +1,133 @@
 .button {
-    --background: #1E2235;
-    --color: #F6F8FF;
-    --shadow: rgba(0, 9, 61, 0.24);
-    --cannon-dark: #A6ACCD;
-    --cannon-light: #F6F8FF;
-    --cannon-shadow: rgba(13, 15, 24, 0.9);
-    --confetti-1: #892AB8;
-    --confetti-2: #EA4C89;
-    --confetti-3: #FFFF04;
-    --confetti-4: #4AF2FD;
-    --z-before: -6;
-    display: block;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    border: 0;
-    background: none;
-    padding: 9px 22px 9px 16px;
-    line-height: 26px;
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 14px;
-    color: var(--color);
-    -webkit-appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform var(--transform-duration, 0.4s);
-    will-change: transform;
-    transform-style: preserve-3d;
-    transform: perspective(440px) rotateX(calc(var(--rx, 0) * 1deg)) rotateY(calc(var(--ry, 0) * 1deg)) translateZ(0);
+  --background: #ffffff;
+  --text: #fff;
+  --cart: #fff;
+  --tick: var(--background);
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  min-width: 144px;
+  transform: scale(var(--scale, 1));
+  transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
   }
-  .button:hover {
-    --transform-duration: .16s;
+  .button:active {
+  --scale: 0.95;
   }
-  .button.success {
-    --confetti-scale: 0;
-    --stroke-dashoffset: 15;
-  }
-  .button:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 12px;
-    transform: translateZ(calc(var(--z-before) * 1px));
-    background: var(--background);
-    box-shadow: 0 4px 8px var(--shadow);
-  }
-  .button .icon,
   .button span {
-    display: inline-block;
-    vertical-align: top;
-    position: relative;
-    z-index: 1;
+  font-size: 13px;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  margin-left: -8px;
+  line-height: 26px;
+  transform: translateY(var(--span-y, 0));
+  transition: transform 0.7s ease;
   }
-  .button .icon {
-    --z: 2px;
-    width: 24px;
-    height: 14px;
-    margin: 8px 16px 0 0;
-    transform: translate(calc(var(--icon-x, 0) * 1px), calc(var(--icon-y, 0) * 1px)) translateZ(2px);
+  .button span:before, .button span:after {
+  content: '';
+  width: var(--w, 2px);
+  height: var(--h, 14px);
+  border-radius: 1px;
+  position: absolute;
+  left: var(--l, 8px);
+  top: var(--t, 6px);
+  background: currentColor;
+  transform: scale(0.75) rotate(var(--icon-r, 0deg)) translateY(var(--icon-y, 0));
+  transition: transform 0.65s ease 0.05s;
   }
-  .button .icon .confetti {
-    position: absolute;
-    left: 17px;
-    bottom: 9px;
+  .button span:after {
+  --w: 14px;
+  --h: 2px;
+  --l: 2px;
+  --t: 12px;
   }
-  .button .icon .confetti svg {
-    width: 18px;
-    height: 16px;
-    display: block;
-    stroke-width: 1px;
-    fill: none;
-    stroke-linejoin: round;
-    stroke-linecap: round;
+  .button .cart {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -13px 0 0 -18px;
+  transform-origin: 12px 23px;
+  transform: translateX(-120px) rotate(-18deg);
   }
-  .button .icon .confetti svg * {
-    transition: stroke-dashoffset 0.2s;
-    stroke-dasharray: 15 20;
-    stroke-dashoffset: var(--stroke-dashoffset, 0);
-    stroke: var(--stroke-all, var(--stroke, var(--confetti-2)));
+  .button .cart:before, .button .cart:after {
+  content: '';
+  position: absolute;
   }
-  .button .icon .confetti svg *:nth-child(2) {
-    --stroke: var(--confetti-3);
+  .button .cart:before {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px var(--cart);
+  bottom: 0;
+  left: 9px;
+  filter: drop-shadow(11px 0 0 var(--cart));
   }
-  .button .icon .confetti svg *:nth-child(3) {
-    --stroke: var(--confetti-1);
+  .button .cart:after {
+  width: 16px;
+  height: 9px;
+  background: var(--cart);
+  left: 9px;
+  bottom: 7px;
+  transform-origin: 50% 100%;
+  transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
+  transition: transform 1.2s ease var(--fill-d);
   }
-  .button .icon .confetti .emitter {
-    position: absolute;
-    left: 4px;
-    bottom: 4px;
-    pointer-events: none;
+  .button .cart svg {
+  z-index: 1;
+  width: 36px;
+  height: 26px;
+  display: block;
+  position: relative;
+  fill: none;
+  stroke: var(--cart);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
   }
-  .button .icon .confetti .emitter div {
-    width: 4px;
-    height: 4px;
-    margin: -2px 0 0 -2px;
-    border-radius: 1px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform-style: preserve-3d;
-    background: var(--confetti-all, var(--b, none));
+  .button .cart svg polyline:last-child {
+  stroke: var(--tick);
+  stroke-dasharray: 10px;
+  stroke-dashoffset: var(--offset, 10px);
+  transition: stroke-dashoffset 0.4s ease var(--offset-d);
   }
-  .button .icon .confetti i {
-    width: 4px;
-    height: 4px;
-    display: block;
-    transform: scale(var(--confetti-scale, 0.5));
-    position: absolute;
-    transition: transform 0.25s;
-    left: var(--left, -1px);
-    top: var(--top, 3px);
-    border-radius: var(--border-radius, 1px);
-    background: var(--confetti-background, var(--confetti-3));
+  .button.loading {
+  --scale: 0.95;
+  --span-y: -32px;
+  --icon-r: 180deg;
+  --fill: 1;
+  --fill-d: 0.8s;
+  --offset: 0;
+  --offset-d: 1.73s;
   }
-  .button .icon .confetti i:nth-child(2) {
-    --left: 9px;
-    --top: -1px;
-    --border-radius: 2px;
-    --confetti-background: var(--confetti-4);
+  .button.loading .cart {
+  animation: cart 3.4s linear forwards 0.2s;
   }
-  .button .icon .confetti i:nth-child(3) {
-    --left: 5px;
-    --top: 3px;
-    --confetti-background: var(--confetti-1);
+  @keyframes cart {
+  12.5% {
+  transform: translateX(-60px) rotate(-18deg);
   }
-  .button .icon .confetti i:nth-child(4) {
-    --left: 10px;
-    --top: 14px;
-    --confetti-background: var(--confetti-2);
+  25%, 45%, 55%, 75% {
+  transform: none;
   }
-  .button .icon .confetti i:nth-child(5) {
-    --left: 9px;
-    --top: 7px;
-    --confetti-background: var(--confetti-4);
+  50% {
+  transform: scale(0.9);
   }
-  .button .icon .confetti i:nth-child(6) {
-    --left: 6px;
-    --top: 8px;
-    --border-radius: 2px;
-    --confetti-background: var(--confetti-2);
+  44%, 56% {
+  transform-origin: 12px 23px;
   }
-  .button .icon .cannon {
-    position: relative;
-    width: 24px;
-    height: 14px;
-    transform: translate(0, 3px) rotate(-45deg);
-    filter: drop-shadow(-2px 2px 2px var(--cannon-shadow));
+  45%, 55% {
+  transform-origin: 50% 50%;
   }
-  .button .icon .cannon:before, .button .icon .cannon:after {
-    content: "";
-    display: block;
-    height: 14px;
+  87.5% {
+  transform: translateX(70px) rotate(-18deg);
   }
-  .button .icon .cannon:before {
-    background: linear-gradient(var(--cannon-dark), var(--cannon-light) 50%, var(--cannon-dark));
-    width: 100%;
-    -webkit-clip-path: polygon(25px -1px, 0 52%, 25px 15px);
-    clip-path: polygon(25px -1px, 0 52%, 25px 15px);
+  100% {
+  transform: translateX(140px) rotate(-18deg);
   }
-  .button .icon .cannon:after {
-    width: 6px;
-    position: absolute;
-    right: -3px;
-    top: 0;
-    border-radius: 50%;
-    box-shadow: inset 0 0 0 0.5px var(--cannon-light);
-    background: linear-gradient(90deg, var(--cannon-dark), var(--cannon-light));
   }
-  .button.white {
-    --background: #fff;
-    --color: #1E2235;
-    --border: #E1E6F9;
-    --shadow: none;
-    --cannon-dark: #103FC5;
-    --cannon-light: #275EFE;
-    --cannon-shadow: rgba(0, 9, 61, 0.2);
-  }
-  .button.white:before {
-    box-shadow: inset 0 0 0 1px var(--border);
-  }
-  .button.grey {
-    --background: #404660;
-    --cannon-shadow: rgba(13, 15, 24, 0.2);
-    --cannon-dark: #D1D6EE;
-    --cannon-light: #FFFFFF;
-  }
+ 
