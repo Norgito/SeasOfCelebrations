@@ -174,40 +174,51 @@
   flex: 0 0 25%;
 }
 
-/* .container {
+.containerHome {
   max-width: 124rem;
   padding: 4rem 1rem;
   margin: 0 auto;
-} */
+}
 
-/* .heading {
+
+
+
+
+
+
+
+.containerHome {
+  max-width: 998px;
+  padding: 1rem 1rem;
+  margin: 0 auto;
+}
+
+
+
+.swiper_container {
+  height: 550px;
   padding: 1rem 0;
-  font-size: 3.5rem;
-  text-align: center;
-} */
-
-/* .swiper_container {
-  height: 52rem;
-  padding: 2rem 0;
   position: relative;
-} */
+}
 
 .swiper-slide {
-  width: 300px;
-  height: 510px;
+  width: 17rem;
+  height: 25rem;
   position: relative;
 }
 
 @media (max-width: 500px) {
-  /* .swiper_container {
-    width: 300px;
-    height: 510px;
-  } */
-  .swiper-slide {
-    width: 300px;
-    height: 510px;
+  .swiper_container {
+    height: 500px;
   }
+  .swiper-slide {
+    width: 28rem !important;
+    height: 12rem !important;
+  }
+
 }
+
+
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -216,15 +227,15 @@
 
 .slider-controler {
   position: relative;
-  bottom: 2rem;
+  bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .slider-controler .swiper-button-next {
-  left: 60% !important;
-  transform: translateX(-60%) !important;
+  left: 59% !important;
+  transform: translateX(-59%) !important;
 }
 
 @media (max-width: 990px) {
@@ -256,29 +267,27 @@
 }
 
 .slider-controler .slider-arrow {
-  background-color: #23a6d5;
-  width: 2.5rem;
-  height: 2.5rem;
+  background: #f0f0f0;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  left: 40%;
-  transform: translateX(-40%);
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+  left: 41%;
+  transform: translateX(-45%);
 }
 
 .slider-controler .slider-arrow ion-icon {
-  font-size: 1.5rem;
-  color: #ffffff !important;
-  z-index: 999 !important;
+  font-size: 1.6rem;
+  color: #222224;
 }
 
 .slider-controler .slider-arrow::after {
-  content: "";
+  content: '';
 }
 
 .swiper-pagination {
   position: relative;
-  width: 15rem !important;
-  bottom: 1.6rem !important;
+  width: 25rem !important;
+  bottom: 1rem;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -287,12 +296,6 @@
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
-}
-
-.swiper-3d {
-  overflow: hidden;
-  width: 1040px;
-  perspective: 1190px !important;
 }
 
 @keyframes floating {

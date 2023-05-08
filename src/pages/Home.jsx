@@ -1,5 +1,5 @@
 import { Confetti } from "../utils/Confetti";
-import HouseList from "../components/ServiceList";
+import ServiceList from "../components/ServiceList";
 import BoxInfo from "../components/BoxInfo";
 import ProductList from "../components/ProductList";
 import RentList from "../components/RentList";
@@ -21,7 +21,7 @@ const Home = () => {
       <div className="mt-10">
         <BoxInfo />
       </div>
-      <div className="mt-6 ">
+      <div className=" ">
         <div className="text-[50px] font-secondary text-center Center flex-col react-floater-animated ">
           <img src={Balloon} className="w-[120px] lg:mr-[445px] absolute" />
           <img src={Balloon} className="w-[120px] lg:ml-[445px] absolute hidden lg:block" />
@@ -31,7 +31,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-        <HouseList />
+        <ServiceList />
         <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated ">
           <img src={Balloon2} className="w-[120px] lg:mr-[445px] absolute" />
           <img src={Balloon2} className="w-[120px] lg:ml-[445px] absolute hidden lg:block" />

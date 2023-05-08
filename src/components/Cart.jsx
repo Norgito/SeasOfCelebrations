@@ -78,10 +78,13 @@ const Cart = () => {
       {/* TEXT */}
       <div className="Center font-bold text-3xl pb-6">
         <div className="text-[40px] font-secondary text-center Center flex-col react-floater-animated ">
-          <img src={Balloon} className="w-[120px] mr-[445px] absolute" />
-          <img src={Balloon} className="w-[120px] ml-[445px] absolute" />
+          <img src={Balloon} className="w-[120px] lg:mr-[445px] absolute" />
+          <img
+            src={Balloon}
+            className="w-[120px] lg:ml-[445px] absolute hidden lg:block"
+          />
           <div className="z-20 Center ">
-            <p className="text-white AnimatedBg2 shadow-lg rounded-full w-[500px] mt-[160px] py-2">
+            <p className="text-white AnimatedBg2 shadow-lg rounded-full md:w-[500px] w-[350px] mt-[160px] py-2">
               Request Quotation
             </p>
           </div>
@@ -89,25 +92,25 @@ const Cart = () => {
       </div>
 
       {/* ITEMS */}
-      <div className="AnimatedBg2 container w-screen rounded-2xl">
+      <div className="AnimatedBg2 lg:container m-3 rounded-3xl">
         {test.cartList.length > 0 &&
           test.cartList.map((prod, i) => (
-            <div key={i} className="  p-4 rounded text-white">
-              <div className=" flex justify-between items-center relative  ">
+            <div key={i} className="  lg:p-4 p-2 rounded text-white">
+              <div className=" flex justify-between pt-2 items-center relative  ">
                 <img
                   src={prod.image}
                   alt="pic"
-                  className="w-[100px] left-4 rounded-full relative bg-white shadow-1 shadow-white"
+                  className="w-[90px] lg:w-[100px] lg:left-4 left-6 rounded-full relative bg-white shadow-1 shadow-white"
                 />
-                <span className="flex w-screen justify-evenly bg-white/40 rounded-r-full py-6">
-                  <p>{prod.name}</p>
-                  <p className="lg:block hidden">Quantity: {prod.quantity}</p>
+                <span className="flex-col lg:flex lg:flex-row text-center w-screen text-[12px] lg:text-base justify-evenly bg-white/40 rounded-r-full lg:py-6 py-1 ">
+                  <p className="text uppercase font-bold">{prod.name}</p>
+
+                  <p className="lg:block">Quantity: {prod.quantity}</p>
                   <p>Price: ${prod.price}</p>
                   <p>
                     Sub: <FormatNumber number={prod.price * prod.quantity} />
                   </p>
                 </span>
-
                 <button
                   onClick={() => test.removeItem(prod.id)}
                   style={{ cursor: "pointer" }}
@@ -122,15 +125,15 @@ const Cart = () => {
         {/* INFO */}
         {test.cartList.length > 0 ? (
           <div className=" p-4 rounded text-white">
-            <div className="flex justify-end -mt-4 mb-10">
-              <p className=" text-xl font-light p-2 px-3 bg-white/40 text-white rounded-full">
+            <div className="flex lg:justify-end justify-center lg:-mt-4  mb-10">
+              <p className=" lg:text-xl font-semibold p-2 px-3 bg-white/40 text-white rounded-full">
                 TOTAL PRICE: <FormatNumber number={test.totalPrice()} />
               </p>
             </div>
             <p className="text-center text-4xl font-semibold mb-4 bg-white/30 rounded-full">
               FILL YOUR INFO
             </p>
-            <form className="Center flex gap-3 m-4 text-base font-light p-1">
+            <form className="Center flex-col lg:flex-row m-4 text-sm gap-2 font-light p-1">
               <input
                 className="p-1 rounded"
                 type="text"
@@ -202,7 +205,7 @@ const Cart = () => {
             )}
             <hr />
             <div
-              className="flex justify-end items-center cursor-pointer pt-2 "
+              className="flex lg:justify-end justify-center items-center cursor-pointer pt-2 "
               onClick={() => test.clear()}
             >
               <img src="https://i.imgur.com/lMNS4MN.png" className="w-[35px]" />
