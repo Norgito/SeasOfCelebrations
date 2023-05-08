@@ -5,8 +5,8 @@ import Deco from "../assets/img/Deco.png"
 
 const BoxInfo = () => {
   return (
-    <div className="">
-      <div className="flex justify-center items-center  font-extralight z-0">
+    <div className="Center ">
+      <div className="lg:flex justify-center items-center  font-extralight z-0">
         <div className="card z-0">
           <div className="icon">
           <img src={Deco} className="w-[110px] z-10" />
@@ -21,7 +21,7 @@ const BoxInfo = () => {
             </p>
           </div>
         </div>
-        <div className="card scale-110">
+        <div className="card lg:scale-110">
           <div className="icon">
           <img src={RentIcon} className="w-[100px] z-10" />
           </div>

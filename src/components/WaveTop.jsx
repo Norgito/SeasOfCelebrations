@@ -6,13 +6,13 @@ const WaveTop = () => {
     <div>
       <div className="headerWave">
         <div className="inner-header flexWave animate__animated animate__delay-2s animate__slower animate__zoomIn">
-          <div className="bg-white/80 mt-[250px] px-6 rounded-full shadow-1 shadow-white ">
-            <p className="AnimatedBg text-[75px]  font-secondary filter drop-shadow-md ">
+          <div className="bg-white/80 lg:mt-[250px] px-4 rounded-full shadow-1 shadow-white ">
+            <p className="AnimatedBg text-[40px] md:text-[60px] lg:text-[75px]  font-secondary filter drop-shadow-md ">
               Party Supplies & Rentals
             </p>
           </div>
         </div>
-        <div>
+        <div className="-mt-[120px] md:mt-0">
           <svg
             className="waves"
             xmlns="http://www.w3.org/2000/svg"

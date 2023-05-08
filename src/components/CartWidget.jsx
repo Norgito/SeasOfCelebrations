@@ -21,9 +21,7 @@ const CartWidget = () => {
               ></Badge>
           </div>
           <div className="Center z-10 ">
-            {/* <ReactFloaterJs> */}
             <img src={CartImage} className="w-[200px]" />
-            {/* </ReactFloaterJs> */}
           </div>
         </Link>
     </div>

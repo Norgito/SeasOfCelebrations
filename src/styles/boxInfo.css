@@ -1,4 +1,5 @@
 
+
 .card {
     background: #287bff;
     display: flex;
@@ -14,9 +15,7 @@
     box-shadow: 0 15px 0 #fff,
             inset 0 -15px 0 rgba(255, 255, 255, 0.24),
             0 45px 0 rgba(255, 255, 255, 0.15);
-    overflow: hidden;
-    z-index: 200;
-     
+    
 }
 
 

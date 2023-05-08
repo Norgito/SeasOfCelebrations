@@ -4,11 +4,15 @@
 import WaveTop from "./WaveTop";
 import PageLinks from "./PageLinks";
 import CartWidget from "./CartWidget";
+import MobileHeader from "./MobileHeader";
 
 const Header = () => {
   return (
     <div>
-      <CartWidget />
+      <MobileHeader />
+      <div className=" hidden lg:block">
+        <CartWidget />
+      </div>
       <PageLinks />
       <WaveTop />
       {/* <NavBar />

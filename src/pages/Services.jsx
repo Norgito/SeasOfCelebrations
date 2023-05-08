@@ -5,7 +5,9 @@ const Services = () => {
   return (
     <div>
       <Filter />
+      <div className="">
       <PageServicesList />
+      </div>
     </div>
   );
 };
