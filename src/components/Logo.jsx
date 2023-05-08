@@ -3,8 +3,8 @@ import logo from "../assets/img/Logo/LogoClean.png";
 
 const Logo = () => {
   return (
-    <div className="">
-      <div className="lg:hidden mt-2 ">
+    <div className="z-50">
+      <div className="lg:hidden mt-16 pl-2 ">
         <div className="">
           <Link to="/">
             <img src={logo} alt="logo" className="w-[160px]" />
