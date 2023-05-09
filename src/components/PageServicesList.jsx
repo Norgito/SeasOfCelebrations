@@ -25,7 +25,7 @@ const PageServicesList = () => {
   return (
     <section className="lg:mb-20 ">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 py-6">
           {searchResults.map((item, HousePage) => {
             return <Service key={HousePage} service={item} />;
           })}

@@ -5,25 +5,26 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 
-
 const CartWidget = () => {
   const test = useContext(CartContext);
 
   return (
-    <div className=" z-50 ">
-      <Link to="/Cart">
-        <div className="absolute ml-9 -mt-2  ">
-          <Badge
-            badgeContent={test.totalProducts()}
-            color="secondary"
-            className=""
-          ></Badge>
-        </div>
-        <div className="text-[40px] text-sky-600">
-          <GiShoppingCart />
-        </div>
-      </Link>
-    </div>
+    <>
+      <div className="flex justify-center items-center">
+        <Link to="/Cart">
+          <div className="absolute ml-9 -mt-1">
+            <Badge
+              badgeContent={test.totalProducts()}
+              color="secondary"
+              className=""
+            ></Badge>
+          </div>
+          <div className="text-[35px] text-sky-600">
+            <GiShoppingCart />
+          </div>
+        </Link>
+      </div>
+    </>
   );
 };
 

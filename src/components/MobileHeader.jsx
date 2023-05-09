@@ -4,12 +4,10 @@ import MobileCartWidget from "./MobileCartWidget";
 
 const MobileHeader = () => {
   return (
-    <div className="top-0 z-50 w-screen">
-      <div className="lg:hidden absolute flex bg-white shadow-lg justify-between px-10 items-center w-full z-50 h-[70px]">
+    <div className="fixed z-50 bg-white w-full top-0 drop-shadow-lg">
+      <div className="lg:hidden flex justify-evenly items-center h-[65px] ">
         <MobileCartWidget />
-        <div className="bg-white shadow-1 shadow-white rounded-full h-[200px] mr-6 flex items-center">
         <Logo />
-        </div>
         <MobileMenu />
       </div>
     </div>

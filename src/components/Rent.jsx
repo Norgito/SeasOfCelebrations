@@ -20,7 +20,7 @@ const Rent = ({ rent }) => {
   };
 
   return (
-    <div className="Center px-2 h-[420px] ">
+    <div className="Center px-2 h-[370px] ">
       <ul className="cards px-2 ">
         <li>
           <a className="cardItems shadow-md">

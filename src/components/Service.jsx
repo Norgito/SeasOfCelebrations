@@ -19,7 +19,7 @@ const Service = ({ service }) => {
   };
 
   return (
-    <div className="Center px-2 h-[420px] lg:h-auto ">
+    <div className="Center px-2 h-[370px] ">
       <ul className="cards px-2 ">
         <li>
           <a className="cardItems shadow-md">

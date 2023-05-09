@@ -13,15 +13,17 @@ import Balloon3 from "../assets/balloon3.png";
 const Home = () => {
   return (
     <div className="rounded-lg ">
+      <div className="z-0">
       <Confetti />
+      </div>
       {/* <div className="text fixed m-4 bottom-0 z-30">
         <WhatsappIcon />
         <InstagramIcon />
       </div> */}
-      <div className="mt-10">
+      <div className="mt-6">
         <BoxInfo />
       </div>
-      <div className=" ">
+      <div className="-mt-6">
         <div className="text-[50px] font-secondary text-center Center flex-col react-floater-animated ">
           <img src={Balloon} className="w-[120px] lg:mr-[445px] absolute" />
           <img src={Balloon} className="w-[120px] lg:ml-[445px] absolute hidden lg:block" />
@@ -32,7 +34,7 @@ const Home = () => {
           </div>
         </div>
         <ServiceList />
-        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated ">
+        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated -mt-16 ">
           <img src={Balloon2} className="w-[120px] lg:mr-[445px] absolute" />
           <img src={Balloon2} className="w-[120px] lg:ml-[445px] absolute hidden lg:block" />
           <div className="z-20 Center">
@@ -42,7 +44,7 @@ const Home = () => {
           </div>
         </div>
         <RentList />
-        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated ">
+        <div className="text-[50px] font-secondary text-center Center flex-col px-6 react-floater-animated -mt-16 ">
           <img src={Balloon3} className="w-[120px] lg:mr-[445px] absolute" />
           <img src={Balloon3} className="w-[120px] lg:ml-[445px] absolute hidden lg:block" />
           <div className="z-20 Center">

@@ -27,16 +27,16 @@ function MobileMenu() {
   };
 
   return (
-    <div className="flex lg:hidden items-center mb-1 justify-center ">
-      <div className="absolute">
+    <div className=" lg:hidden">
+      <div className="">
       <button
-        className="text-primary items-center focus:outline-none"
+        className="text-primary focus:outline-none p-0"
         onClick={handleMenuClick}
       >
         <Hamburger
           toggled={isOpen}
           toggle={setOpen}
-          size={32}
+          size={30}
           rounded
           duration={1}
           onToggle={(toggled) => {

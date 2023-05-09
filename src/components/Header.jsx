@@ -9,7 +9,9 @@ import MobileHeader from "./MobileHeader";
 const Header = () => {
   return (
     <div>
+      <div className="">
       <MobileHeader />
+      </div>
       <div className=" hidden lg:block">
         <CartWidget />
       </div>

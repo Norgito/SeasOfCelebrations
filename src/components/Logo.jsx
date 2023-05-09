@@ -3,13 +3,12 @@ import logo from "../assets/img/Logo/LogoClean.png";
 
 const Logo = () => {
   return (
-    <div className="z-50">
-      <div className="lg:hidden mt-16 pl-2 ">
-        <div className="">
+    <div className="z-50 bg-white rounded-b-full ml-3">
+      <div className="lg:hidden w-[200px] mt-16  ">
           <Link to="/">
-            <img src={logo} alt="logo" className="w-[160px]" />
+            <img src={logo} alt="logo" className="p-3" />
           </Link>
-        </div>
+
       </div>
     </div>
   );

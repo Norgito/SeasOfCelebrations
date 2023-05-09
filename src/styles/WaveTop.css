@@ -3,7 +3,7 @@
   text-align: center;
   background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab),
     url(https://i.imgur.com/oRbPAGz.png);
-  /* animation: gradient 35s ease infinite; */
+  animation: gradient 45s ease infinite;
   background-size: cover;
   background-blend-mode: screen;
 }

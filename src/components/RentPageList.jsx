@@ -26,7 +26,7 @@ const RentPageList = () => {
   return (
     <section className="mb-20 ">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 py-6">
           {searchResults.map((rent, indexPageRent) => {
             return <Rent key={indexPageRent} rent={rent} />;
           })}

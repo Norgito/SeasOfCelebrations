@@ -90,7 +90,7 @@
 }
 
 .ColorBg2 {
-  background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);
+  background-image: linear-gradient(135deg, #81ffef 10%, #f067b4 100%);
 }
 .ColorProd {
   background-image: linear-gradient(
@@ -114,7 +114,6 @@
   background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 45s ease infinite;
-
 }
 
 @keyframes gradient {
@@ -180,23 +179,14 @@
   margin: 0 auto;
 }
 
-
-
-
-
-
-
-
 .containerHome {
   max-width: 998px;
   padding: 1rem 1rem;
   margin: 0 auto;
 }
 
-
-
 .swiper_container {
-  height: 550px;
+  height: 480px;
   padding: 1rem 0;
   position: relative;
 }
@@ -215,10 +205,7 @@
     width: 28rem !important;
     height: 12rem !important;
   }
-
 }
-
-
 
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
@@ -281,7 +268,7 @@
 }
 
 .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .swiper-pagination {
