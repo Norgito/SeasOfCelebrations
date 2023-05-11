@@ -1,18 +1,16 @@
 import { useContext } from "react";
-// import components
-// import CountryDropdown from "./CountryDropdown";
-// import PropertyDropdown from "./PropertyDropdown";
-// import PriceRangeDropdown from "./PriceRangeDropdown";
-import ResetButton from "./ResetButton";
-// import icons
 import { RiSearch2Line } from "react-icons/ri";
 import { HouseContext } from "../../components/HouseContext";
+import PropTypes from "prop-types";
 import CategoryDropdown from "./CategoryDropdown";
+import ResetButton from "./ResetButton";
 
-const Filter = () => {
+const Filter = ({ backgroundColor }) => {
   const { handleClick } = useContext(HouseContext);
   return (
-    <div className="px-[30px] py-6 max-w-[1170px] mx-auto flex flex-col lg:flex-row justify-center lg:gap-x-3 lg:shadow-1 bg-white  font-light lg:backdrop-blur items-center gap-2 relative lg:z-50 rounded-full m-4">
+    <div
+      className={`Filter ${backgroundColor}`}
+    >
       <CategoryDropdown />
       <CategoryDropdown />
       <CategoryDropdown />
@@ -25,6 +23,10 @@ const Filter = () => {
       <ResetButton />
     </div>
   );
+};
+
+Filter.propTypes = {
+  backgroundColor: PropTypes.string.isRequired,
 };
 
 export default Filter;

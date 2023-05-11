@@ -1,10 +1,8 @@
-// import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CartImage from "../assets/CartBalloon1.png";
 import Badge from "@mui/material/Badge";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
-// import ReactFloaterJs from "react-floaterjs";
 
 
 const CartWidget = () => {

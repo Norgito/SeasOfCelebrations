@@ -32,7 +32,7 @@ const CartButton = () => {
   }
 
   return (
-    <button className="button bg-white/30  rounded-full text-white Center" onClick={onClick}>
+    <button className="button bg-white/30  rounded-full text-white Center p-1.5" onClick={onClick}>
       <span>ADD TO CART</span>
       <div className="cart">
         <svg viewBox="0 0 36 26">

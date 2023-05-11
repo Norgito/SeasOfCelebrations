@@ -63,7 +63,7 @@ const HouseList = () => {
             <div className="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
-            <div className="swiper-pagination "></div>
+            <div className="swiper-pagination"></div>
           </div>
         </Swiper>
       </div>

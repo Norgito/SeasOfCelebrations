@@ -3,7 +3,7 @@ import "../styles/confetti.css";
 
 export const Confetti = () => {
   const confettiShower = [];
-  const numConfettis = 30;
+  const numConfettis = 20;
   const colors = ["#f2abe7", "#9fa3ec", "#86d2e1 ", "#fec31e "];
   const confettiContainer = React.useRef(null);
 

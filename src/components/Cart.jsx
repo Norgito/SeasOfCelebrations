@@ -2,8 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
-import Balloon from "../assets/Bcart.png";
-
+import Carrito from "../assets/cart.png";
 import {
   collection,
   getFirestore,
@@ -12,8 +11,8 @@ import {
   increment,
   setDoc,
 } from "firebase/firestore";
-
 import FormatNumber from "../utils/FormatNumber";
+import BalloonsHeader from "./BalloonsHeader";
 // import { notify } from "../Util/Notify";
 // import { ToastContainer } from "react-toastify";
 // import { Zoom } from "react-toastify";
@@ -75,35 +74,22 @@ const Cart = () => {
 
   return (
     <>
-      {/* TEXT */}
-      <div className="Center font-bold text-3xl pb-6">
-        <div className="text-[40px] font-secondary text-center Center flex-col react-floater-animated ">
-          <img src={Balloon} className="w-[120px] lg:mr-[445px] absolute" />
-          <img
-            src={Balloon}
-            className="w-[120px] lg:ml-[445px] absolute hidden lg:block"
-          />
-          <div className="z-20 Center ">
-            <p className="text-white AnimatedBg2 shadow-lg rounded-full md:w-[500px] w-[350px] mt-[160px] py-2">
-              Request Quotation
-            </p>
-          </div>
-        </div>
-      </div>
+      <BalloonsHeader page="Cart" />
 
       {/* ITEMS */}
+
       <div className="AnimatedBg2 lg:container m-3 rounded-3xl">
         {test.cartList.length > 0 &&
           test.cartList.map((prod, i) => (
             <div key={i} className="  lg:p-4 p-2 rounded text-white">
-              <div className=" flex justify-between pt-2 items-center relative  ">
+              <div className=" flex justify-between pt-2 items-center relative">
                 <img
                   src={prod.image}
                   alt="pic"
-                  className="w-[90px] lg:w-[100px] lg:left-4 left-6 rounded-full relative bg-white shadow-1 shadow-white"
+                  className="w-[90px] lg:w-[100px] lg:left-4 left-6 rounded-full relative shadow-1 shadow-white"
                 />
-                <span className="flex-col lg:flex lg:flex-row text-center w-screen text-[12px] lg:text-base justify-evenly bg-white/40 rounded-r-full lg:py-6 py-1 ">
-                  <p className="text uppercase font-bold">{prod.name}</p>
+                <span className="flex-col lg:flex lg:flex-row text-center w-screen text-[12px] lg:text-base lg:items-center justify-evenly bg-white/40 rounded-r-full py-1 ">
+                  <p className="lg:p-4 uppercase font-bold">{prod.name}</p>
 
                   <p className="lg:block">Quantity: {prod.quantity}</p>
                   <p>Price: ${prod.price}</p>
@@ -126,7 +112,7 @@ const Cart = () => {
         {test.cartList.length > 0 ? (
           <div className=" p-4 rounded text-white">
             <div className="flex lg:justify-end justify-center lg:-mt-4  mb-10">
-              <p className=" lg:text-xl font-semibold p-2 px-3 bg-white/40 text-white rounded-full">
+              <p className=" lg:text-base font-semibold p-2 px-3 bg-white/40 text-white rounded-full">
                 TOTAL PRICE: <FormatNumber number={test.totalPrice()} />
               </p>
             </div>
@@ -213,13 +199,23 @@ const Cart = () => {
             </div>
           </div>
         ) : (
-          <div className="Center p-6">
+          <div className="Center p-6 flex-col">
             <Link to="/">
               <img
-                src="https://i.imgur.com/oGLVZoz.png"
-                height="auto"
+                src={Carrito}
                 alt="empty page"
+                className="w-[350px] react-floater-animated"
               />
+              <div className="Center rounded-2xl text-white mt-2 flex-col">
+                <p className="font-semibold uppercase text-[20px]">
+                  Shopping Cart Empty
+                </p>
+                <div className="flex items-center py-2 rounded-full bg-white/50 justify-start">
+                  <div className=" px-3 rounded">
+                    <p> BACK HOME</p>
+                  </div>
+                </div>
+              </div>
             </Link>
           </div>
         )}

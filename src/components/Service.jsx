@@ -26,7 +26,7 @@ const Service = ({ service }) => {
             <img src={service.image} className="card__image" />
             <div className="card__overlay">
               <div className="card__header ColorSer">
-                <svg className="card__arc3" xmlns="http://www.w3.org/2000/svg">
+                <svg className="card__arc1" xmlns="http://www.w3.org/2000/svg">
                   <path />
                 </svg>
                 <div className=" text-white shadow-1 border-2  shadow-white Center rounded-full w-[55px] h-[55px]">

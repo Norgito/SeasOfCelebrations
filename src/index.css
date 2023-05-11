@@ -37,6 +37,29 @@
   .price {
     @apply absolute right-0 mt-6 rounded-l-full w-[70px] h-[30px] text-center p-1  text-sm text-white shadow-md;
   }
+
+  .Filter {
+  @apply px-[30px] py-6 lg:container flex flex-col lg:flex-row justify-center gap-3 lg:shadow-1 m-6 font-light  bg-white rounded-3xl lg:rounded-full lg:before:rounded-full
+  relative
+  before:rounded-3xl
+  before:absolute
+  before:w-full
+  before:h-full
+  before:-z-10
+  before:bg-gradient-to-r
+  before:left-0
+  before:top-0
+  before:blur-[5px]
+  }
+  .FRent {
+    @apply before:from-[#fee56d] before:to-[#f541c5]
+  }
+  .FProd {
+    @apply before:from-[#37f782] before:to-[#8b65ed]
+  }
+  .FSer {
+    @apply before:from-[#f839e3] before:to-[#7257f4]
+  }
 }
 
 .MainBg {
@@ -87,10 +110,6 @@
     #fa8d9a 48%,
     #f541c5 100%
   );
-}
-
-.ColorBg2 {
-  background-image: linear-gradient(135deg, #81ffef 10%, #f067b4 100%);
 }
 .ColorProd {
   background-image: linear-gradient(
@@ -260,6 +279,7 @@
   border-radius: 50%;
   left: 41%;
   transform: translateX(-45%);
+  z-index: 9999;
 }
 
 .slider-controler .slider-arrow ion-icon {
