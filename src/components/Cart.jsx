@@ -3,6 +3,7 @@ import { CartContext } from "../context/CartContext";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
 import Carrito from "../assets/cart.png";
+import ClearCart from "../assets/img/ClearCart.png";
 import {
   collection,
   getFirestore,
@@ -194,7 +195,7 @@ const Cart = () => {
               className="flex lg:justify-end justify-center items-center cursor-pointer pt-2 "
               onClick={() => test.clear()}
             >
-              <img src="https://i.imgur.com/lMNS4MN.png" className="w-[35px]" />
+              <img src={ClearCart} className="w-[35px]" />
               <p>CLEAR CART</p>
             </div>
           </div>

@@ -83,17 +83,17 @@ const Contact = () => {
         </div>
       </div>
       <br />
-      {/* <div className="mt-3 rounded-2xl">
+      <div className="lg:mt-2 rounded-2xl">
         <iframe
           src="https://www.google.com/maps/embed/v1/place?q=Roatán,+Honduras&key=AIzaSyD42hLJEwWq5z4ytCeQXxNNUCW7cYKmLws"
-          width="920px"
-          height={300}
+          className="lg:w-[1000px] w-[400px]"
+          height={250}
           style={{ border: 0 }}
           allowFullScreen
           aria-hidden="false"
           tabIndex={0}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
