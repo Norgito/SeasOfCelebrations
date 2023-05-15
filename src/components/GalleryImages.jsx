@@ -16,7 +16,6 @@ import Img13 from "../assets/img/Gallery/Seas13.jpg";
 
 const GalleryImages = () => {
   const [toggler, setToggler] = useState(false);
-  // create a state variable for sourceIndex and a setter function
   const [sourceIndex, setSourceIndex] = useState(1);
 
   const images = [
@@ -34,14 +33,11 @@ const GalleryImages = () => {
     Img13,
   ];
 
-  // add this useEffect hook
   useEffect(() => {
-    // get all the <a> elements with data-fslightbox attribute
     const links = document.querySelectorAll("a[data-fslightbox]");
-    // loop through them and add a click event listener
+
     for (let link of links) {
       link.addEventListener("click", (e) => {
-        // prevent the default behavior of opening the image in a new tab
         e.preventDefault();
       });
     }
@@ -59,9 +55,8 @@ const GalleryImages = () => {
               data-fslightbox="gallery"
             >
               <div
-                // update the sourceIndex and toggler state when clicking on an image
                 onClick={() => {
-                  setSourceIndex(index); // add 1 because sourceIndex starts from 1
+                  setSourceIndex(index);
                   setToggler(!toggler);
                 }}
                 className="img rounded-xl"
