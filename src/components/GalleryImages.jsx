@@ -1,26 +1,38 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "../styles/Gallery.css";
 import FsLightbox from "fslightbox-react";
 
-const GalleryImages = () => {
+// Use a custom hook to handle the lightbox logic
+const useLightbox = () => {
   const [toggler, setToggler] = useState(false);
-  const [sourceIndex, setSourceIndex] = useState(1);
+  const [sourceIndex, setSourceIndex] = useState(0);
+
+  const openLightbox = (index) => {
+    setSourceIndex(index);
+    setToggler(!toggler);
+  };
+
+  return [toggler, sourceIndex, openLightbox];
+};
+
+const GalleryImages = () => {
+  // Use the custom hook
+  const [toggler, sourceIndex, openLightbox] = useLightbox();
 
   const images = [
-    "https://i.imgur.com/syyH46l.jpg",
-    "https://i.imgur.com/syyH46l.jpg",
-    "https://i.imgur.com/syyH46l.jpg",
+    {
+      src: "https://i.imgur.com/syyH46l.jpg",
+      thumb: "https://i.imgur.com/syyH46l.jpg",
+    },
+    {
+      src: "https://i.imgur.com/TEFKo5h.jpg",
+      thumb: "https://i.imgur.com/TEFKo5h.jpg",
+    },
+    {
+      src: "https://i.imgur.com/BFeLhll.jpg",
+      thumb: "https://i.imgur.com/BFeLhll.jpg",
+    },
   ];
-
-  useEffect(() => {
-    const links = document.querySelectorAll("a[data-fslightbox]");
-
-    for (let link of links) {
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-      });
-    }
-  }, []);
 
   return (
     <div>
@@ -28,19 +40,17 @@ const GalleryImages = () => {
         <div className="gallery col-3">
           {images.map((image, index) => (
             <a
-              key={index}
+              // Use a unique identifier as a key, such as the image source
+              key={image.src}
               className="item"
-              href={image}
+              href={image.src}
               data-fslightbox="gallery"
             >
               <div
-                onClick={() => {
-                  setSourceIndex(index);
-                  setToggler(!toggler);
-                }}
+                onClick={() => openLightbox(index)}
                 className="img rounded-xl"
                 style={{
-                  backgroundImage: `url(${image})`,
+                  backgroundImage: `url(${image.thumb})`,
                 }}
               />
             </a>
@@ -50,7 +60,7 @@ const GalleryImages = () => {
 
       <FsLightbox
         toggler={toggler}
-        sources={images}
+        sources={images.map((image) => image.src)}
         key={images.length}
         sourceIndex={sourceIndex}
       />
