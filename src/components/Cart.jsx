@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
-// import Carrito from "../assets/cart.png";
+import Carrito from "../assets/cart.png";
 import ClearCart from "../assets/img/ClearCart.png";
 import {
   collection,
@@ -202,11 +202,11 @@ const Cart = () => {
         ) : (
           <div className="Center p-6 flex-col">
             <Link to="/">
-              {/* <img
+              <img
                 src={Carrito}
                 alt="empty page"
                 className="w-[350px] react-floater-animated"
-              /> */}
+              />
               <div className="Center rounded-2xl text-white mt-2 flex-col">
                 <p className="font-semibold uppercase text-[20px]">
                   Shopping Cart Empty

@@ -1,8 +1,8 @@
 import { Confetti } from "../utils/Confetti";
-// import ServiceList from "../components/ServiceList";
+import ServiceList from "../components/ServiceList";
 import BoxInfo from "../components/BoxInfo";
-// import ProductList from "../components/ProductList";
-// import RentList from "../components/RentList";
+import ProductList from "../components/ProductList";
+import RentList from "../components/RentList";
 import "../index.css";
 import RentBalloons from "../components/RentBalloons"
 import ProductBalloons from "../components/ProductBalloons"
@@ -20,11 +20,11 @@ const Home = () => {
       </div>
       <div className="-mt-6">
         <ServiceBalloons />
-        {/* <ServiceList /> */}
+        <ServiceList />
         <RentBalloons />
-        {/* <RentList /> */}
+        <RentList />
         <ProductBalloons />
-        {/* <ProductList /> */}
+        <ProductList />
       </div>
     </div>
   );
