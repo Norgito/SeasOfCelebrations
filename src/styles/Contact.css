@@ -155,7 +155,7 @@ textarea.input {
   /* Other existing styles */
 
   /* Background Image */
-   background-image: url(../assets/img/Contact.jpg);
+   /* background-image: url(../assets/img/Contact.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
