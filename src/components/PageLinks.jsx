@@ -29,11 +29,11 @@ const PageLinks = () => {
             </ul>
           </div>
 
-          <div className="bg-white/90 shadow-1 shadow-white rounded-full h-[250px] w-[250px] ">
+          <div className="bg-white/80 shadow-1 Center rounded-full h-[425px] w-[425px] ">
             <img
               src={Logo}
               alt="Logo"
-              className="w-[250px] mx-auto mt-8 filter drop-shadow-md shadow-white"
+              className=" mx-auto"
             />
           </div>
           <div className="bg-white/90 rounded-r-full relative right-0.5">

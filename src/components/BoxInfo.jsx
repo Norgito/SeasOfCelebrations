@@ -13,11 +13,9 @@ const BoxInfo = () => {
           </div>
 
           <div className="content z-0">
-            <h2 className="bg-white/30 rounded-full py-2">DECORACIÓN</h2>
+            <h2 className="bg-white/30 rounded-full py-2">DECORATION</h2>
             <p className="text-[15px]">
-              Decoramos con globos tu evento para crear un ambiente mágico y
-              memorable. Ofrecemos diseños y colores personalizados para darle
-              un toque especial a cualquier ocasión.
+            We decorate your event with balloons to create a magical and memorable atmosphere. We offer custom designs and colors to add a special touch to any occasion..
             </p>
           </div>
         </div>
@@ -26,11 +24,9 @@ const BoxInfo = () => {
           <img src={RentIcon} className="w-[100px] z-10" />
           </div>
           <div className="content">
-            <h2 className="bg-white/30 rounded-full py-2">RENTA</h2>
+            <h2 className="bg-white/30 rounded-full py-2">RENT</h2>
             <p className="text-[15px]">
-              En Seas of Celebrations frecemos renta para eventos con mesas,
-              sillas, carpas, iluminación y más. Creamos la atmósfera ideal para
-              bodas y fiestas.
+            At Seas of Celebrations, we offer rental services for events including tables, chairs, tents, lighting, and more. We create the ideal atmosphere for weddings and parties.
             </p>
           </div>
         </div>
@@ -39,11 +35,9 @@ const BoxInfo = () => {
             <img src={Conf} className="w-[100px] z-10" />
           </div>
           <div className="content">
-            <h2 className="bg-white/30 rounded-full py-2">EVENTOS</h2>
+            <h2 className="bg-white/30 rounded-full py-2">PRODUCTS</h2>
             <p className="text-[15px]">
-              Seas of Celebrations transforma espacios en ambientes mágicos y
-              acogedores con detalles personalizados y diseños únicos, creando
-              celebraciones inolvidables.
+            Shop our delightful selection of event decorations: vibrant balloons, whimsical garlands, and charming accessories. Create a festive atmosphere with our high-quality products.
             </p>
           </div>
         </div>

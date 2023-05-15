@@ -102,7 +102,7 @@ const GalleryImages = () => {
               
                 <svg
                   className=" w-8 stroke-red-700 stroke-1"
-                  fill="purple"
+                  fill="full"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
               >

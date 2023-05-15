@@ -167,6 +167,13 @@
   position: relative;
 }
 
+.LogoBg {
+  background-image: url(./assets/Sun.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .NavLink a::after {
   content: "";
   width: 0;

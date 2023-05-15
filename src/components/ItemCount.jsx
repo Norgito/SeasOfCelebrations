@@ -24,12 +24,12 @@ const ItemCount = ({ stock = 0, onAdd }) => {
 
   return (
     <>
-      <div className="flex border rounded-full justify-center items-center gap-4 mt-2 text-white">
-        <button onClick={handleSubtract} className="text-xs rounded-full">
+      <div className="rounded-full Center mx-auto gap-3 mt-2 py-1 w-[100px] text-white">
+        <button onClick={handleSubtract} className="text-base rounded-full bg-white/30 w-6">
           -
         </button>
         <p className="font-primary text-sm">{count}</p>
-        <button onClick={handleAdd} className="text-xs rounded-full">
+        <button onClick={handleAdd} className="text-base rounded-full bg-white/30 w-6">
           +
         </button>
       </div>
