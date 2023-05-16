@@ -120,11 +120,11 @@ const Cart = () => {
             <p className="text-center text-4xl font-semibold mb-4 bg-white/30 rounded-full">
               FILL YOUR INFO
             </p>
-            <form className="Center flex-col lg:flex-row m-4 text-sm gap-2 font-light p-1">
+            <form className="Center flex-col text-gray-700 lg:flex-row m-4 text-sm gap-2 p-1">
               <input
                 className="p-1 rounded"
                 type="text"
-                placeholder="Full Name"
+                placeholder="Name"
                 name="name"
                 required
                 onChange={handleSubmitChange}
@@ -145,21 +145,14 @@ const Cart = () => {
                 required
                 onChange={handleSubmitChange}
               />
-              <input
-                className="p-1 rounded"
-                type="text"
-                placeholder="Address"
-                name="adress"
-                required
-                onChange={handleSubmitChange}
-              />
+            
             </form>
 
-            {buyer.name && buyer.adress && buyer.phone && buyer.email ? (
+            {buyer.name && buyer.phone && buyer.email ? (
               <>
                 <hr />
                 <div className="Center w-auto">
-                  <button className="bg-white/40 m-2 rounded-full">
+                  <button className="bg-white/40 m-3 rounded-full p-2">
                     <input
                       onClick={() => {
                         orderHandler();
