@@ -2,21 +2,22 @@ import { useContext } from "react";
 import { RiSearch2Line } from "react-icons/ri";
 import { HouseContext } from "../../components/HouseContext";
 import PropTypes from "prop-types";
-import CategoryDropdown from "./CategoryDropdown";
+import CountryDropdown from "./CountryDropdown";
+import PropertyDropdown from "./PropertyDrodown";
+import PriceRangeDropdown from "./PriceRangeDropdown";
 import ResetButton from "./ResetButton";
 
-const Filter = ({ backgroundColor }) => {
+const Filter = ({ backgroundColor, buttonClass }) => {
   const { handleClick } = useContext(HouseContext);
   return (
-    <div
-      className={`Filter ${backgroundColor}`}
-    >
-      <CategoryDropdown />
-      <CategoryDropdown />
-      <CategoryDropdown />
+    <div className={`Filter ${backgroundColor} Center`}>
+      <CountryDropdown />
+      <PropertyDropdown />
+      <PriceRangeDropdown />
+
       <button
         onClick={() => handleClick()}
-        className="bg-gray-200 hover:bg-primary hover:text-white transition w-full lg:max-w-[132px] h-14 rounded flex justify-center items-center text-primary text-lg"
+        className={`border text-black transition w-full lg:max-w-[132px] h-14 rounded flex justify-center items-center text-lg ${buttonClass}`}
       >
         <RiSearch2Line />
       </button>
@@ -27,6 +28,7 @@ const Filter = ({ backgroundColor }) => {
 
 Filter.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
+  buttonClass: PropTypes.string.isRequired,
 };
 
 export default Filter;

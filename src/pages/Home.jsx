@@ -14,13 +14,13 @@ const Home = () => {
       <div className="z-10">
         <Confetti />
       </div>
-      <div className="mt-12 px-4 rounded-full shadow-1 shadow-white flex flex-col justify-center items-center">
+      <div className="hidden container mt-12 px-4 lg:flex flex-col justify-center items-center">
         <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px]  font-secondary filter drop-shadow-md ">
           Your Home for
         </p>
         <br />
-        <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px]  font-secondary filter drop-shadow-md ">
-          Party Supplies and Rentals!
+        <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px] -mt-10  font-secondary filter drop-shadow-md px-3 ">
+          Party Supplies & Rentals!
         </p>
       </div>
       <div className="mt-6">

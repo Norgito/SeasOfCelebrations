@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
 
@@ -11,9 +11,9 @@ const HouseContextProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [rents, setRents] = useState([]);
   const [originalItems, setOriginalItems] = useState([]);
-  const [country, setCountry] = useState("Location (any)");
+  const [country, setCountry] = useState("Event (any)");
   const [countries, setCountries] = useState(["Location "]);
-  const [property, setProperty] = useState("Property type (any)");
+  const [property, setProperty] = useState("Category (any)");
   const [properties, setProperties] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
   const [images, setImages] = useState([]);
@@ -38,64 +38,64 @@ const HouseContextProvider = ({ children }) => {
     getItems();
   }, []);
 
-  // Products
+    // Products
+    useEffect(() => {
+      const getProducts = async () => {
+        try {
+          const data = await getDocs(collection(db, "products"));
+          const productsArray = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setProducts(productsArray);
+          setOriginalItems(productsArray);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      getProducts();
+    }, []);
+  
+    // Rents
+    useEffect(() => {
+      const getRents = async () => {
+        try {
+          const data = await getDocs(collection(db, "rents"));
+          const rentsArray = data.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }));
+          setRents(rentsArray);
+          setOriginalItems(rentsArray);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      getRents();
+    }, []);
+
+  // Countries
   useEffect(() => {
-    const getProducts = async () => {
+    const getCountriesList = async () => {
       try {
-        const data = await getDocs(collection(db, "products"));
-        const productsArray = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setProducts(productsArray);
-        setOriginalItems(productsArray);
-      } catch (error) {
-        console.error(error);
+        const data = await getDocs(collection(db, "items"));
+        const countries = data.docs.map((doc) => doc.data().country);
+        const uniqueCountries = [...new Set(countries)];
+        setCountries(uniqueCountries);
+      } catch (err) {
+        console.error(err);
       }
     };
-    getProducts();
+
+    getCountriesList();
   }, []);
 
-  // Rents
-  useEffect(() => {
-    const getRents = async () => {
-      try {
-        const data = await getDocs(collection(db, "rents"));
-        const rentsArray = data.docs.map((doc) => ({
-          ...doc.data(),
-          id: doc.id,
-        }));
-        setRents(rentsArray);
-        setOriginalItems(rentsArray);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    getRents();
-  }, []);
-
-  // // Countries
-  // useEffect(() => {
-  //   const getCountriesList = async () => {
-  //     try {
-  //       const data = await getDocs(collection(db, "items"));
-  //       const countries = data.docs.map((doc) => doc.data().country);
-  //       const uniqueCountries = [...new Set(countries)];
-  //       setCountries(uniqueCountries);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
-
-  //   getCountriesList();
-  // }, []);
-
-  // // Properties
+  // Properties
   useEffect(() => {
     const getPropertiesList = async () => {
       try {
-        const data = await getDocs(collection(db, "products"));
-        const properties = data.docs.map((doc) => doc.data().category);
+        const data = await getDocs(collection(db, "items"));
+        const properties = data.docs.map((doc) => doc.data().type);
         const uniqueProperties = [...new Set(properties)];
         setProperties(uniqueProperties);
       } catch (err) {
@@ -106,20 +106,20 @@ const HouseContextProvider = ({ children }) => {
     getPropertiesList();
   }, []);
 
-  // // Images
-  // useEffect(() => {
-  //   const getImages = async () => {
-  //     try {
-  //       const data = await getDocs(collection(db, "items"));
-  //       const images = data.docs.map((doc) => doc.data().image);
-  //       setImages(images);
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   };
+  // Images
+  useEffect(() => {
+    const getImages = async () => {
+      try {
+        const data = await getDocs(collection(db, "items"));
+        const images = data.docs.map((doc) => doc.data().image);
+        setImages(images);
+      } catch (err) {
+        console.error(err);
+      }
+    };
 
-  //   getImages();
-  // }, []);
+    getImages();
+  }, []);
 
   const handleClick = () => {
     setLoading(true);
@@ -192,6 +192,8 @@ const HouseContextProvider = ({ children }) => {
     });
 
     setItems(newHouses);
+    setProducts(newHouses);
+    setRents(newHouses);
     setLoading(false);
   };
 
@@ -207,6 +209,8 @@ const HouseContextProvider = ({ children }) => {
         price,
         items,
         setItems,
+        setRents,
+        setProducts,
         setPrice,
         handleClick,
         loading,

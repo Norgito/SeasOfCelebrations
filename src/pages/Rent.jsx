@@ -7,8 +7,8 @@ const Rent = () => {
     <div>
       <div className="-mt-6">
         <RentBalloons />
-        <div className="mt-10">
-          <Filter backgroundColor="Filter FRent" />
+        <div id="Rent" className="mt-10">
+          <Filter backgroundColor="Filter FRent" buttonClass="button-rent" />
         </div>
       </div>
       <RentPageList />

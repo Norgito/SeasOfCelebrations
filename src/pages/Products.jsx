@@ -7,8 +7,8 @@ const Products = () => {
     <div>
       <div className="-mt-6">
         <ProductBalloons />
-        <div className="mt-10">
-          <Filter backgroundColor="Filter FProd" />
+        <div id="Product" className="mt-10">
+          <Filter backgroundColor="Filter FProd" buttonClass="button-prod" />
         </div>
       </div>
       <ProductPageList />

@@ -83,7 +83,7 @@ const Contact = () => {
         </div>
       </div>
       <br />
-      <div className="lg:mt-2 rounded-2xl">
+      <div className="lg:mt-2 rounded-2xl z-10">
         <iframe
           src="https://www.google.com/maps/embed/v1/place?q=Roatán,+Honduras&key=AIzaSyD42hLJEwWq5z4ytCeQXxNNUCW7cYKmLws"
           className="lg:w-[1000px] w-[400px]"

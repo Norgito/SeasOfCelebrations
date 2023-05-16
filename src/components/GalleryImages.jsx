@@ -5,7 +5,7 @@ const GalleryImages = () => {
     <div>
       <div className="containerr AnimatedBg">
         <aside className="carousel">
-          <div className="carousel__wrapper">
+          <div className="carousel__wrapper pb-1">
             <div className="item" id="slide-0">
               <img
                 src="https://i.imgur.com/syyH46l.jpg"
@@ -83,8 +83,8 @@ const GalleryImages = () => {
             <header className="instagram__header">
               <figure>
                 <img
-                  src="https://i.imgur.com/upWHQOX.jpg"
-                  alt="Jake Dog"
+                  src="https://i.imgur.com/45hvemM.png"
+                  alt="Seas Logo"
                   width={42}
                   height={42}
                 />

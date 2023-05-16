@@ -7,8 +7,8 @@ const Services = () => {
     <div>
       <div className="-mt-6">
         <ServiceBalloons />
-        <div className="mt-10">
-          <Filter backgroundColor="Filter FSer" />
+        <div id="Service" className="mt-10">
+          <Filter backgroundColor="Filter FSer" buttonClass="button-serv" />
         </div>
       </div>
       <PageServicesList />
