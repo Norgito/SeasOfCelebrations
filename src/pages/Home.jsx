@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-//import { Confetti } from "../utils/Confetti";
+import { Confetti } from "../utils/Confetti";
 import ServiceList from "../components/ServiceList";
 import BoxInfo from "../components/BoxInfo";
 import ProductList from "../components/ProductList";
@@ -19,9 +19,9 @@ const Home = React.memo(() => {
   }, []);
   return (
     <div className="rounded-lg ">
-      {/* <div className="z-10">
+      <div className="z-10">
         <Confetti />
-      </div> */}
+      </div>
       <div className="hidden container mt-12 px-4 lg:flex flex-col justify-center items-center">
         <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px]  font-secondary filter drop-shadow-md ">
           <Fade delay={500} cascade damping={0.06}>
