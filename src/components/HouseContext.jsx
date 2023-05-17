@@ -220,9 +220,7 @@ const HouseContextProvider = ({ children }) => {
         images,
         setImages,
         products,
-        setProducts,
         rents,
-        setRents,
       }}
     >
       {children}

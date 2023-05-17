@@ -26,7 +26,7 @@ const InstagramIcon = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div ref={instagramRef} className="w-[70px] z-50 fixed bottom-[80px] left-2"></div>
+      <div ref={instagramRef} className="w-[70px] z-50 "></div>
     </Link>
   );
 };

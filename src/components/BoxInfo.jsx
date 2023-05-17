@@ -19,13 +19,11 @@ const BoxInfo = () => {
                 DECORATION
               </Fade>
             </h2>
-            <Fade delay={600} cascade damping={0.03}>
               <p className="text-[15px]">
                 We decorate your event with balloons to create a magical and
                 memorable atmosphere. We offer custom designs and colors to add
                 a special touch to any occasion..
               </p>
-            </Fade>
           </div>
         </div>
         <div className="card lg:scale-110">
@@ -38,13 +36,11 @@ const BoxInfo = () => {
                 RENT
               </Fade>
             </h2>
-            <Fade delay={800} cascade damping={0.03}>
               <p className="text-[15px]">
                 At Seas of Celebrations, we offer rental services for events
                 including tables, chairs, tents, lighting, and more. We create
                 the ideal atmosphere for weddings and parties.
               </p>
-            </Fade>
           </div>
         </div>
         <div className="card z-0">
@@ -57,13 +53,11 @@ const BoxInfo = () => {
                 PRODUCTS
               </Fade>
             </h2>
-            <Fade delay={1000} cascade damping={0.03}>
               <p className="text-[15px]">
                 Shop our delightful selection of event decorations: vibrant
                 balloons, whimsical garlands, and charming accessories. Create a
                 festive atmosphere with our high-quality products.
               </p>
-            </Fade>
           </div>
         </div>
       </div>

@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Divide as Hamburger } from "hamburger-react";
 import { Link, useLocation } from "react-router-dom";
 
+import Inst from "../assets/img/SocialMedia/inst.png";
+import Wapp from "../assets/img/SocialMedia/wapp.png";
 
 import "../index.css";
 import AOS from "aos";
@@ -130,6 +132,20 @@ function MobileMenu() {
                 </p>
               </Link>
             </li>
+            <div className="flex justify-center items-center pt-3 gap-x-5">
+                <a href="tel:+2975938082">
+                <img src={Wapp} className="w-[40px]" />
+                </a>
+
+              <Link
+                to="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img alt="svgImg" src={Inst} className="w-[45px]" />
+              </Link>
+
+            </div>
           </ul>
         </div>
       )}

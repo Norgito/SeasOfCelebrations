@@ -25,7 +25,7 @@ const WhatsappIcon = () => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div ref={wapp} className="w-[70px] z-50 fixed bottom-2 left-2"></div>
+      <div ref={wapp} className="w-[70px] z-50 fixed bottom-5 right-3"></div>
     </a>
   );
 };
