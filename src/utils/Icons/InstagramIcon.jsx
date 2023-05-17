@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 
@@ -22,11 +22,11 @@ const InstagramIcon = () => {
 
   return (
     <Link
-      to="https://www.facebook.com/SunCaribbeanRealty/"
+      to="https://www.instagram.com/seasofcelebrations/"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div ref={instagramRef} className="w-[70px]"></div>
+      <div ref={instagramRef} className="w-[70px] z-50 fixed bottom-[80px] left-2"></div>
     </Link>
   );
 };

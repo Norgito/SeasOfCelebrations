@@ -1,13 +1,12 @@
 import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import lottie from "lottie-web";
 
 const WhatsappIcon = () => {
-  const tiktokRef = useRef(null);
+  const wapp = useRef(null);
 
   useEffect(() => {
     const animation = lottie.loadAnimation({
-      container: tiktokRef.current,
+      container: wapp.current,
       renderer: "svg",
       loop: true,
       autoplay: true,
@@ -21,13 +20,13 @@ const WhatsappIcon = () => {
   }, []);
 
   return (
-    <Link
-      to="https://www.facebook.com/SunCaribbeanRealty/"
+    <a
+      href="https://wa.me/+542212229368"
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div ref={tiktokRef} className="w-[70px]"></div>
-    </Link>
+      <div ref={wapp} className="w-[70px] z-50 fixed bottom-2 left-2"></div>
+    </a>
   );
 };
 

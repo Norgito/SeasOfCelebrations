@@ -3,6 +3,8 @@ import WaveTop from "./WaveTop";
 import PageLinks from "./PageLinks";
 import CartWidget from "./CartWidget";
 import MobileHeader from "./MobileHeader";
+import WhatsappIcon from "../utils/Icons/WhatsappIcon";
+import InstagramIcon from "../utils/Icons/InstagramIcon";
 
 const Header = () => {
   const location = useLocation();
@@ -21,6 +23,8 @@ const Header = () => {
       )}
       <PageLinks />
       <WaveTop />
+      <InstagramIcon />
+      <WhatsappIcon />
     </div>
   );
 };

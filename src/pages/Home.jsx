@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Confetti } from "../utils/Confetti";
 import ServiceList from "../components/ServiceList";
 import BoxInfo from "../components/BoxInfo";
@@ -7,8 +8,15 @@ import "../index.css";
 import RentBalloons from "../components/RentBalloons";
 import ProductBalloons from "../components/ProductBalloons";
 import ServiceBalloons from "../components/ServiceBalloons";
+import { Fade } from "react-awesome-reveal";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="rounded-lg ">
       <div className="z-10">
@@ -16,23 +24,42 @@ const Home = () => {
       </div>
       <div className="hidden container mt-12 px-4 lg:flex flex-col justify-center items-center">
         <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px]  font-secondary filter drop-shadow-md ">
-          Your Home for
+          <Fade delay={500} cascade damping={0.06}>
+            Your Home for
+          </Fade>
         </p>
         <br />
         <p className="AnimatedBg text-[35px] md:text-[60px] lg:text-[70px] -mt-10  font-secondary filter drop-shadow-md px-3 ">
-          Party Supplies & Rentals!
+          <Fade delay={1700} cascade damping={0.06}>
+            Party Supplies & Rentals!
+          </Fade>
         </p>
       </div>
       <div className="mt-6">
         <BoxInfo />
       </div>
       <div className="-mt-6">
-        <ServiceBalloons />
-        <ServiceList />
-        <RentBalloons />
-        <RentList />
-        <ProductBalloons />
-        <ProductList />
+        <div
+         data-aos="zoom-in"
+        data-aos-duration="3000"
+        >
+          <ServiceBalloons />
+          <ServiceList />
+        </div>
+        <div
+         data-aos="zoom-in"
+        data-aos-duration="3000"
+        >
+          <RentBalloons />
+          <RentList />
+        </div>
+        <div
+         data-aos="zoom-in"
+        data-aos-duration="3000"
+        >
+          <ProductBalloons />
+          <ProductList />
+        </div>
       </div>
     </div>
   );

@@ -3,6 +3,8 @@ import Badge from "@mui/material/Badge";
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import 'animate.css';
+
 
 
 const CartWidget = () => {
@@ -18,7 +20,7 @@ const CartWidget = () => {
               className="relative mt-[118px] pl-2"
               ></Badge>
           </div>
-          <div className="Center z-10 ">
+          <div className="Center z-10 animate__animated animate__zoomIn animate__slower ">
             <img src={CartImage} className="w-[200px]" />
           </div>
         </Link>
