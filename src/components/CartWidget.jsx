@@ -21,7 +21,7 @@ const CartWidget = () => {
               ></Badge>
           </div>
           <div className="Center z-10 animate__animated animate__zoomIn animate__slower ">
-            <img src={CartImage} className="w-[200px]" />
+            <img src={CartImage} alt="Cart Balloon" className="w-[200px]" />
           </div>
         </Link>
     </div>

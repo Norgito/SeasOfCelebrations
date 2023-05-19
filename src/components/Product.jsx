@@ -20,11 +20,16 @@ const Product = ({ prod }) => {
   };
 
   return (
-    <div className="Center px-2 h-[370px]">
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="2000"
+      className="Center px-2 h-[370px]"
+    >
       <ul className="cards px-2 ">
         <li>
           <a className="cardItems shadow-md">
-            <img src={prod.image} className="card__image" />
+            <img src={prod.image} alt="Product Balloon" className="card__image" />
             <div className="card__overlay">
               <div className="card__header ColorProd">
                 <svg className="card__arc3" xmlns="http://www.w3.org/2000/svg">

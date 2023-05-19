@@ -3,6 +3,7 @@ import WaveTop from "./WaveTop";
 import PageLinks from "./PageLinks";
 import CartWidget from "./CartWidget";
 import MobileHeader from "./MobileHeader";
+//import MainIcon from "../utils/Icons/MainIcon";
 // import Waves from "./Waves";
 // import WhatsappIcon from "../utils/Icons/WhatsappIcon";
 // import InstagramIcon from "../utils/Icons/InstagramIcon";
@@ -13,7 +14,7 @@ const Header = () => {
   const isCartPage = location.pathname === "/Cart"; // Update this with the actual URL path for the Cart Page
 
   return (
-    <div>
+    <div className="z-20">
       <div className="">
         <MobileHeader />
       </div>
@@ -24,6 +25,7 @@ const Header = () => {
       )}
       <PageLinks />
       <WaveTop />
+      {/* <MainIcon /> */}
       {/* <Waves /> */}
       {/* <InstagramIcon />
       <WhatsappIcon /> */}

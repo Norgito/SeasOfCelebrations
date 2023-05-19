@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Link } from "react-router-dom";
@@ -14,6 +14,8 @@ import {
 } from "firebase/firestore";
 import FormatNumber from "../utils/FormatNumber";
 import BalloonsHeader from "./BalloonsHeader";
+import Spinner from "../utils/Spinner";
+import { scrollToTop } from "../utils/ScrollToTop";
 // import { notify } from "../Util/Notify";
 // import { ToastContainer } from "react-toastify";
 // import { Zoom } from "react-toastify";
@@ -73,13 +75,18 @@ const Cart = () => {
     test.clear();
   };
 
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <>
+      <Spinner />
       <BalloonsHeader page="Cart" />
 
       {/* ITEMS */}
 
-      <div className="AnimatedBg2 lg:container m-3 rounded-3xl">
+      <div className="AnimatedBg2 lg:container mb-20 rounded-3xl">
         {test.cartList.length > 0 &&
           test.cartList.map((prod, i) => (
             <div key={i} className="  lg:p-4 p-2 rounded text-white">
@@ -145,7 +152,6 @@ const Cart = () => {
                 required
                 onChange={handleSubmitChange}
               />
-            
             </form>
 
             {buyer.name && buyer.phone && buyer.email ? (
@@ -204,7 +210,7 @@ const Cart = () => {
                 <p className="font-semibold uppercase text-[20px]">
                   Shopping Cart Empty
                 </p>
-                <div className="flex items-center py-2 rounded-full bg-white/50 justify-start">
+                <div className="flex items-center py-1 rounded-full bg-white/50 justify-start">
                   <div className=" px-3 rounded">
                     <p> BACK HOME</p>
                   </div>

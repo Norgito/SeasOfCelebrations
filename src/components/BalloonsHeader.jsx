@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Balloon from "../assets/Bcart.png";
 
-const BalloonsHeader = ({ page }) => {
+function BalloonsHeader({ page }) {
   let text = "";
 
   if (page === "Contact") {
@@ -28,7 +28,7 @@ const BalloonsHeader = ({ page }) => {
       </div>
     </div>
   );
-};
+}
 
 BalloonsHeader.propTypes = {
   page: PropTypes.oneOf(["Contact", "Cart", "Gallery"]).isRequired,

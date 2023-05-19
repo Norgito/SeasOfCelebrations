@@ -1,6 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import { HouseContext } from "./HouseContext";
 import Product from "./Product";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -14,6 +16,8 @@ const ProductList = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     setSearchResults(products);
   }, [products]);
 
@@ -31,28 +35,28 @@ const ProductList = () => {
 
   return (
     <section className="containerHome">
-    <div>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
+      <div>
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            clickable: true,
+          }}
+          modules={[EffectCoverflow, Pagination, Navigation]}
+          className="swiper_container"
+        >
           {searchResults.map((prod, indexProd) => (
             <SwiperSlide key={indexProd}>
               <div className="">
@@ -60,7 +64,12 @@ const ProductList = () => {
               </div>
             </SwiperSlide>
           ))}
-          <div className="slider-controler ">
+          <div
+            data-aos="zoom-in-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+            className="slider-controler "
+          >
             <div className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>

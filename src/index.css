@@ -206,6 +206,14 @@
   background-clip: text;
 }
 
+.AnimatedBg1 {
+  background: linear-gradient(-45deg, #ee7752, #f5689e, #23a6d5, #23d5ab);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .container2 {
   position: absolute;
   left: 50%;

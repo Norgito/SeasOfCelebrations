@@ -1,6 +1,7 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../config/firebase";
+import PropTypes from "prop-types";
 
 // create context
 export const HouseContext = createContext();
@@ -38,41 +39,41 @@ const HouseContextProvider = ({ children }) => {
     getItems();
   }, []);
 
-    // Products
-    useEffect(() => {
-      const getProducts = async () => {
-        try {
-          const data = await getDocs(collection(db, "products"));
-          const productsArray = data.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }));
-          setProducts(productsArray);
-          setOriginalItems(productsArray);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      getProducts();
-    }, []);
-  
-    // Rents
-    useEffect(() => {
-      const getRents = async () => {
-        try {
-          const data = await getDocs(collection(db, "rents"));
-          const rentsArray = data.docs.map((doc) => ({
-            ...doc.data(),
-            id: doc.id,
-          }));
-          setRents(rentsArray);
-          setOriginalItems(rentsArray);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      getRents();
-    }, []);
+  // Products
+  useEffect(() => {
+    const getProducts = async () => {
+      try {
+        const data = await getDocs(collection(db, "products"));
+        const productsArray = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setProducts(productsArray);
+        setOriginalItems(productsArray);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getProducts();
+  }, []);
+
+  // Rents
+  useEffect(() => {
+    const getRents = async () => {
+      try {
+        const data = await getDocs(collection(db, "rents"));
+        const rentsArray = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        setRents(rentsArray);
+        setOriginalItems(rentsArray);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    getRents();
+  }, []);
 
   // Countries
   useEffect(() => {
@@ -226,6 +227,10 @@ const HouseContextProvider = ({ children }) => {
       {children}
     </HouseContext.Provider>
   );
+};
+
+HouseContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default HouseContextProvider;

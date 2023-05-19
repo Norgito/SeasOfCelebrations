@@ -4,9 +4,9 @@ import { Fade } from "react-awesome-reveal";
 const ServiceBalloons = () => {
   return (
     <div className="text-[40px] font-secondary text-center Center flex-col react-floater-animated ">
-      <img src={Balloon} className="w-[120px] lg:mr-[345px] absolute" />
+      <img src={Balloon} alt="Service Balloon" className="w-[120px] lg:mr-[345px] absolute" />
       <img
-        src={Balloon}
+        src={Balloon} alt="Service Balloon"
         className="w-[120px] lg:ml-[345px] absolute hidden lg:block"
       />
       <div className="z-20 Center ">

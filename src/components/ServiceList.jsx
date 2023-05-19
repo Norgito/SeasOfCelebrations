@@ -1,6 +1,8 @@
 import { useContext, useState, useEffect } from "react";
 import { HouseContext } from "./HouseContext";
 import Service from "./Service";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -13,6 +15,8 @@ const HouseList = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
+    AOS.init();
+    AOS.refresh();
     setSearchResults(items);
   }, [items]);
 
@@ -56,7 +60,12 @@ const HouseList = () => {
               <Service service={item} />
             </SwiperSlide>
           ))}
-          <div className="slider-controler">
+          <div
+            data-aos="zoom-in-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+            className="slider-controler"
+          >
             <div className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>

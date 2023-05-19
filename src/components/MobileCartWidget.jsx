@@ -10,8 +10,8 @@ const CartWidget = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center">
-        <Link to="/Cart">
+      <div className="flex justify-center items-center" >
+        <Link to="/Cart" aria-label="Open Cart">
           <div className="absolute ml-9 -mt-1">
             <Badge
               badgeContent={test.totalProducts()}

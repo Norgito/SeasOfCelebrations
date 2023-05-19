@@ -16,6 +16,8 @@ import Footer from "../src/components/Footer";
 import "./index.css";
 
 function App() {
+
+
   return (
     <div className="App">
       <div className=" mx-auto Backdrop ">

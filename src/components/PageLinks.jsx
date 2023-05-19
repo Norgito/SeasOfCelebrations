@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 const PageLinks = () => {
   return (
-    <div className="relative Center z-10 hidden lg:block ">
+    <div className="relative Center z-10 hidden lg:block" >
       <div className="absolute top-3 w-full text-center ">
         <div className="flex justify-center items-center uppercase font-bold  ">
           <div className="bg-white/90 shadow-1 shadow-white rounded-l-full left-0.5 relative">
