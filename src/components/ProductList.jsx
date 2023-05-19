@@ -68,7 +68,7 @@ const ProductList = () => {
             data-aos="zoom-in-down"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="1500"
-            className="slider-controler "
+            className="slider-controler z-50 "
           >
             <div className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>

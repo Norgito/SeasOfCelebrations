@@ -1,4 +1,3 @@
-import React from "react";
 import "../styles/Gallery.css";
 
 const GalleryImages = () => {
